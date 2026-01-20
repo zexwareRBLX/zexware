@@ -1,0 +1,1592 @@
+
+
+local pwrware = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local Frame_3 = Instance.new("Frame")
+local aimbotgui = Instance.new("Frame")
+local title = Instance.new("TextLabel")
+local legitlock = Instance.new("Frame")
+local aimtext = Instance.new("TextLabel")
+local lockaimtoggle = Instance.new("TextButton")
+local lockdecor = Instance.new("TextLabel")
+local fovtext = Instance.new("TextLabel")
+local sliderbar = Instance.new("Frame")
+local slider = Instance.new("Frame")
+local fill = Instance.new("Frame")
+local sliderbar1 = Instance.new("Frame")
+local showfovtoggle = Instance.new("TextButton")
+local smoothnesstoggle = Instance.new("TextButton")
+local smoothnesstext = Instance.new("TextLabel")
+local sliderbarfov = Instance.new("Frame")
+local slider_2 = Instance.new("Frame")
+local fill_2 = Instance.new("Frame")
+local sliderbar1_2 = Instance.new("Frame")
+local keybindtext = Instance.new("TextLabel")
+local keybindtoggle = Instance.new("TextButton")
+local aimparttext = Instance.new("TextLabel")
+local aimparttoggle = Instance.new("TextButton")
+local visualsgui = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local esptab = Instance.new("Frame")
+local esptoggletext = Instance.new("TextLabel")
+local espdecor = Instance.new("TextLabel")
+local esptoggle = Instance.new("TextButton")
+local nametoggletext = Instance.new("TextLabel")
+local healthtoggletext = Instance.new("TextLabel")
+local chamstoggletext = Instance.new("TextLabel")
+local nametoggle = Instance.new("TextButton")
+local healthtoggle = Instance.new("TextButton")
+local chamstoggle = Instance.new("TextButton")
+local playergui = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local miscgui = Instance.new("Frame")
+local TextLabel_3 = Instance.new("TextLabel")
+local menu = Instance.new("Frame")
+local menudecor = Instance.new("TextLabel")
+local keybindtoggle_2 = Instance.new("TextButton")
+local menukeybind = Instance.new("TextLabel")
+local logo1 = Instance.new("TextLabel")
+local logo2 = Instance.new("TextLabel")
+local logo3 = Instance.new("TextLabel")
+local logo4 = Instance.new("TextLabel")
+local aimbot = Instance.new("TextButton")
+local visuals = Instance.new("TextButton")
+local player = Instance.new("TextButton")
+local misc = Instance.new("TextButton")
+local lockdecor_2 = Instance.new("TextLabel")
+local DragArea = Instance.new("Frame")
+
+--Properties:
+
+pwrware.Name = "pwrware"
+pwrware.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+pwrware.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+pwrware.ResetOnSpawn = false
+
+Frame.Parent = pwrware
+Frame.BackgroundColor3 = Color3.fromRGB(6, 29, 112)
+Frame.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderSizePixel = 2
+Frame.Position = UDim2.new(0.360138416, 0, 0.0918731689, 0)
+Frame.Size = UDim2.new(0, 400, 0, 659)
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.0166479498, 0, 0.0280878413, 0)
+Frame_2.Size = UDim2.new(0, 385, 0, 620)
+
+Frame_3.Parent = Frame_2
+Frame_3.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_3.BorderSizePixel = 0
+Frame_3.Position = UDim2.new(0.0233766232, 0, 0.0483870953, 0)
+Frame_3.Size = UDim2.new(0, 367, 0, 581)
+
+aimbotgui.Name = "aimbotgui"
+aimbotgui.Parent = Frame_3
+aimbotgui.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+aimbotgui.BorderColor3 = Color3.fromRGB(0, 0, 0)
+aimbotgui.BorderSizePixel = 0
+aimbotgui.LayoutOrder = -3
+aimbotgui.Position = UDim2.new(0.0163487736, 0, 0.0671256483, 0)
+aimbotgui.Size = UDim2.new(0, 354, 0, 533)
+aimbotgui.Visible = false
+
+title.Name = "title"
+title.Parent = aimbotgui
+title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title.BackgroundTransparency = 1.000
+title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+title.BorderSizePixel = 0
+title.Position = UDim2.new(0.245762706, 0, -0.0863039419, 0)
+title.Size = UDim2.new(0, 181, 0, 46)
+title.Font = Enum.Font.SourceSans
+title.Text = "Aim"
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.TextSize = 14.000
+title.TextStrokeTransparency = 0.000
+
+legitlock.Name = "legitlock"
+legitlock.Parent = aimbotgui
+legitlock.BackgroundColor3 = Color3.fromRGB(6, 29, 112)
+legitlock.BorderColor3 = Color3.fromRGB(0, 0, 0)
+legitlock.Position = UDim2.new(0.0169491526, 0, 0.0131332083, 0)
+legitlock.Size = UDim2.new(0, 122, 0, 225)
+
+aimtext.Name = "aim text"
+aimtext.Parent = legitlock
+aimtext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+aimtext.BackgroundTransparency = 1.000
+aimtext.BorderColor3 = Color3.fromRGB(0, 0, 0)
+aimtext.Position = UDim2.new(-0.48693046, 0, 0.0484157316, 0)
+aimtext.Size = UDim2.new(0, 181, 0, 46)
+aimtext.Font = Enum.Font.SourceSans
+aimtext.Text = "Lock aim  -"
+aimtext.TextColor3 = Color3.fromRGB(255, 255, 255)
+aimtext.TextSize = 14.000
+aimtext.TextStrokeTransparency = 0.000
+
+lockaimtoggle.Name = "lockaimtoggle"
+lockaimtoggle.Parent = legitlock
+lockaimtoggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+lockaimtoggle.BackgroundTransparency = 1.000
+lockaimtoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+lockaimtoggle.BorderSizePixel = 0
+lockaimtoggle.Position = UDim2.new(0.475409836, 0, 0.0844444409, 0)
+lockaimtoggle.Size = UDim2.new(0, 46, 0, 30)
+lockaimtoggle.Font = Enum.Font.SourceSans
+lockaimtoggle.Text = "N/A"
+lockaimtoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+lockaimtoggle.TextSize = 14.000
+lockaimtoggle.TextStrokeTransparency = 0.000
+
+lockdecor.Name = "lock decor"
+lockdecor.Parent = legitlock
+lockdecor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+lockdecor.BackgroundTransparency = 1.000
+lockdecor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+lockdecor.BorderSizePixel = 0
+lockdecor.Position = UDim2.new(0.0737704933, 0, 0, 0)
+lockdecor.Size = UDim2.new(0, 104, 0, 19)
+lockdecor.Font = Enum.Font.SourceSans
+lockdecor.Text = "legit"
+lockdecor.TextColor3 = Color3.fromRGB(255, 255, 255)
+lockdecor.TextSize = 14.000
+lockdecor.TextStrokeTransparency = 0.000
+
+fovtext.Name = "fov text"
+fovtext.Parent = legitlock
+fovtext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fovtext.BackgroundTransparency = 1.000
+fovtext.BorderColor3 = Color3.fromRGB(0, 0, 0)
+fovtext.Position = UDim2.new(-0.48693046, 0, 0.155082405, 0)
+fovtext.Size = UDim2.new(0, 181, 0, 46)
+fovtext.Font = Enum.Font.SourceSans
+fovtext.Text = "Show fov  -"
+fovtext.TextColor3 = Color3.fromRGB(255, 255, 255)
+fovtext.TextSize = 14.000
+fovtext.TextStrokeTransparency = 0.000
+
+sliderbar.Name = "sliderbar"
+sliderbar.Parent = legitlock
+sliderbar.BackgroundColor3 = Color3.fromRGB(139, 139, 139)
+sliderbar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+sliderbar.BorderSizePixel = 0
+sliderbar.Position = UDim2.new(0.0737704933, 0, 0.355555564, 0)
+sliderbar.Size = UDim2.new(0, 80, 0, 10)
+
+slider.Name = "slider"
+slider.Parent = sliderbar
+slider.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+slider.BorderColor3 = Color3.fromRGB(0, 0, 0)
+slider.BorderSizePixel = 0
+slider.LayoutOrder = 4
+slider.Size = UDim2.new(0, 15, 0, 10)
+slider.ZIndex = 2
+
+fill.Name = "fill"
+fill.Parent = sliderbar
+fill.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+fill.BorderColor3 = Color3.fromRGB(0, 0, 0)
+fill.BorderSizePixel = 0
+fill.Size = UDim2.new(0, 0, 0, -10)
+
+sliderbar1.Name = "sliderbar1"
+sliderbar1.Parent = sliderbar
+sliderbar1.BackgroundColor3 = Color3.fromRGB(139, 139, 139)
+sliderbar1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+sliderbar1.BorderSizePixel = 0
+sliderbar1.LayoutOrder = 4
+sliderbar1.Position = UDim2.new(1, 0, 0, 0)
+sliderbar1.Size = UDim2.new(0, 15, 0, 10)
+
+showfovtoggle.Name = "showfovtoggle"
+showfovtoggle.Parent = legitlock
+showfovtoggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+showfovtoggle.BackgroundTransparency = 1.000
+showfovtoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+showfovtoggle.BorderSizePixel = 0
+showfovtoggle.Position = UDim2.new(0.475409836, 0, 0.191111118, 0)
+showfovtoggle.Size = UDim2.new(0, 46, 0, 30)
+showfovtoggle.Font = Enum.Font.SourceSans
+showfovtoggle.Text = "N/A"
+showfovtoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+showfovtoggle.TextSize = 14.000
+showfovtoggle.TextStrokeTransparency = 0.000
+
+smoothnesstoggle.Name = "smoothnesstoggle"
+smoothnesstoggle.Parent = legitlock
+smoothnesstoggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+smoothnesstoggle.BackgroundTransparency = 1.000
+smoothnesstoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+smoothnesstoggle.BorderSizePixel = 0
+smoothnesstoggle.Position = UDim2.new(0.549180329, 0, 0.431111097, 0)
+smoothnesstoggle.Size = UDim2.new(0, 46, 0, 30)
+smoothnesstoggle.Font = Enum.Font.SourceSans
+smoothnesstoggle.Text = "N/A"
+smoothnesstoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+smoothnesstoggle.TextSize = 14.000
+smoothnesstoggle.TextStrokeTransparency = 0.000
+
+smoothnesstext.Name = "smoothness text"
+smoothnesstext.Parent = legitlock
+smoothnesstext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+smoothnesstext.BackgroundTransparency = 1.000
+smoothnesstext.BorderColor3 = Color3.fromRGB(0, 0, 0)
+smoothnesstext.Position = UDim2.new(0.0599999987, 0, 0.444000006, 0)
+smoothnesstext.Size = UDim2.new(0, 66, 0, 23)
+smoothnesstext.Font = Enum.Font.SourceSans
+smoothnesstext.Text = "Smoothness  -"
+smoothnesstext.TextColor3 = Color3.fromRGB(255, 255, 255)
+smoothnesstext.TextScaled = true
+smoothnesstext.TextSize = 14.000
+smoothnesstext.TextStrokeTransparency = 0.000
+smoothnesstext.TextWrapped = true
+
+sliderbarfov.Name = "sliderbarfov"
+sliderbarfov.Parent = legitlock
+sliderbarfov.BackgroundColor3 = Color3.fromRGB(139, 139, 139)
+sliderbarfov.BorderColor3 = Color3.fromRGB(0, 0, 0)
+sliderbarfov.BorderSizePixel = 0
+sliderbarfov.Position = UDim2.new(0.0737704933, 0, 0.595555544, 0)
+sliderbarfov.Size = UDim2.new(0, 80, 0, 10)
+
+slider_2.Name = "slider"
+slider_2.Parent = sliderbarfov
+slider_2.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+slider_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+slider_2.BorderSizePixel = 0
+slider_2.LayoutOrder = 4
+slider_2.Size = UDim2.new(0, 15, 0, 10)
+slider_2.ZIndex = 2
+
+fill_2.Name = "fill"
+fill_2.Parent = sliderbarfov
+fill_2.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+fill_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+fill_2.BorderSizePixel = 0
+fill_2.Size = UDim2.new(0, 0, 0, -10)
+
+sliderbar1_2.Name = "sliderbar1"
+sliderbar1_2.Parent = sliderbarfov
+sliderbar1_2.BackgroundColor3 = Color3.fromRGB(139, 139, 139)
+sliderbar1_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+sliderbar1_2.BorderSizePixel = 0
+sliderbar1_2.LayoutOrder = 4
+sliderbar1_2.Position = UDim2.new(1, 0, 0, 0)
+sliderbar1_2.Size = UDim2.new(0, 15, 0, 10)
+
+keybindtext.Name = "keybind text"
+keybindtext.Parent = legitlock
+keybindtext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+keybindtext.BackgroundTransparency = 1.000
+keybindtext.BorderColor3 = Color3.fromRGB(0, 0, 0)
+keybindtext.Position = UDim2.new(-0.48693046, 0, 0.639526904, 0)
+keybindtext.Size = UDim2.new(0, 181, 0, 46)
+keybindtext.Font = Enum.Font.SourceSans
+keybindtext.Text = "Keybind  -"
+keybindtext.TextColor3 = Color3.fromRGB(255, 255, 255)
+keybindtext.TextSize = 14.000
+keybindtext.TextStrokeTransparency = 0.000
+
+keybindtoggle.Name = "keybindtoggle"
+keybindtoggle.Parent = legitlock
+keybindtoggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+keybindtoggle.BackgroundTransparency = 1.000
+keybindtoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+keybindtoggle.BorderSizePixel = 0
+keybindtoggle.Position = UDim2.new(0.409836054, 0, 0.671111107, 0)
+keybindtoggle.Size = UDim2.new(0, 54, 0, 32)
+keybindtoggle.Font = Enum.Font.SourceSans
+keybindtoggle.Text = "N/A"
+keybindtoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+keybindtoggle.TextSize = 14.000
+keybindtoggle.TextStrokeTransparency = 0.000
+
+aimparttext.Name = "aimpart text"
+aimparttext.Parent = legitlock
+aimparttext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+aimparttext.BackgroundTransparency = 1.000
+aimparttext.BorderColor3 = Color3.fromRGB(0, 0, 0)
+aimparttext.Position = UDim2.new(-0.48693046, 0, 0.750638008, 0)
+aimparttext.Size = UDim2.new(0, 181, 0, 46)
+aimparttext.Font = Enum.Font.SourceSans
+aimparttext.Text = "Aim part  -"
+aimparttext.TextColor3 = Color3.fromRGB(255, 255, 255)
+aimparttext.TextSize = 14.000
+aimparttext.TextStrokeTransparency = 0.000
+
+aimparttoggle.Name = "aimparttoggle"
+aimparttoggle.Parent = legitlock
+aimparttoggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+aimparttoggle.BackgroundTransparency = 1.000
+aimparttoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+aimparttoggle.BorderSizePixel = 0
+aimparttoggle.Position = UDim2.new(0.44262296, 0, 0.782222211, 0)
+aimparttoggle.Size = UDim2.new(0, 46, 0, 30)
+aimparttoggle.Font = Enum.Font.SourceSans
+aimparttoggle.Text = "N/A"
+aimparttoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+aimparttoggle.TextSize = 14.000
+aimparttoggle.TextStrokeTransparency = 0.000
+
+visualsgui.Name = "visualsgui"
+visualsgui.Parent = Frame_3
+visualsgui.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+visualsgui.BorderColor3 = Color3.fromRGB(0, 0, 0)
+visualsgui.BorderSizePixel = 0
+visualsgui.LayoutOrder = -3
+visualsgui.Position = UDim2.new(0.0163487736, 0, 0.0671256483, 0)
+visualsgui.Size = UDim2.new(0, 354, 0, 533)
+visualsgui.Visible = false
+
+TextLabel.Parent = visualsgui
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.245762706, 0, -0.0863039419, 0)
+TextLabel.Size = UDim2.new(0, 181, 0, 46)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Visuals"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+TextLabel.TextStrokeTransparency = 0.000
+
+esptab.Name = "esptab"
+esptab.Parent = visualsgui
+esptab.BackgroundColor3 = Color3.fromRGB(6, 29, 112)
+esptab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+esptab.Position = UDim2.new(0.0169491526, 0, 0.0131332083, 0)
+esptab.Size = UDim2.new(0, 122, 0, 225)
+
+esptoggletext.Name = "esptoggletext"
+esptoggletext.Parent = esptab
+esptoggletext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+esptoggletext.BackgroundTransparency = 1.000
+esptoggletext.BorderColor3 = Color3.fromRGB(0, 0, 0)
+esptoggletext.Position = UDim2.new(-0.48693046, 0, 0.0484157316, 0)
+esptoggletext.Size = UDim2.new(0, 181, 0, 46)
+esptoggletext.Font = Enum.Font.SourceSans
+esptoggletext.Text = "esp  -"
+esptoggletext.TextColor3 = Color3.fromRGB(255, 255, 255)
+esptoggletext.TextSize = 14.000
+esptoggletext.TextStrokeTransparency = 0.000
+
+espdecor.Name = "esp decor"
+espdecor.Parent = esptab
+espdecor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+espdecor.BackgroundTransparency = 1.000
+espdecor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+espdecor.BorderSizePixel = 0
+espdecor.Position = UDim2.new(0.0737704933, 0, 0, 0)
+espdecor.Size = UDim2.new(0, 104, 0, 19)
+espdecor.Font = Enum.Font.SourceSans
+espdecor.Text = "esp"
+espdecor.TextColor3 = Color3.fromRGB(255, 255, 255)
+espdecor.TextSize = 14.000
+espdecor.TextStrokeTransparency = 0.000
+
+esptoggle.Name = "esptoggle"
+esptoggle.Parent = esptab
+esptoggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+esptoggle.BackgroundTransparency = 1.000
+esptoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+esptoggle.BorderSizePixel = 0
+esptoggle.Position = UDim2.new(0.475409836, 0, 0.0844444409, 0)
+esptoggle.Size = UDim2.new(0, 46, 0, 30)
+esptoggle.Font = Enum.Font.SourceSans
+esptoggle.Text = "N/A"
+esptoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+esptoggle.TextSize = 14.000
+esptoggle.TextStrokeTransparency = 0.000
+
+nametoggletext.Name = "nametoggletext"
+nametoggletext.Parent = esptab
+nametoggletext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+nametoggletext.BackgroundTransparency = 1.000
+nametoggletext.BorderColor3 = Color3.fromRGB(0, 0, 0)
+nametoggletext.Position = UDim2.new(-0.48693046, 0, 0.190638021, 0)
+nametoggletext.Size = UDim2.new(0, 181, 0, 46)
+nametoggletext.Font = Enum.Font.SourceSans
+nametoggletext.Text = "name  -"
+nametoggletext.TextColor3 = Color3.fromRGB(255, 255, 255)
+nametoggletext.TextSize = 14.000
+nametoggletext.TextStrokeTransparency = 0.000
+
+healthtoggletext.Name = "healthtoggletext"
+healthtoggletext.Parent = esptab
+healthtoggletext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+healthtoggletext.BackgroundTransparency = 1.000
+healthtoggletext.BorderColor3 = Color3.fromRGB(0, 0, 0)
+healthtoggletext.Position = UDim2.new(-0.48693046, 0, 0.319526911, 0)
+healthtoggletext.Size = UDim2.new(0, 181, 0, 46)
+healthtoggletext.Font = Enum.Font.SourceSans
+healthtoggletext.Text = "health  -"
+healthtoggletext.TextColor3 = Color3.fromRGB(255, 255, 255)
+healthtoggletext.TextSize = 14.000
+healthtoggletext.TextStrokeTransparency = 0.000
+
+chamstoggletext.Name = "chamstoggletext"
+chamstoggletext.Parent = esptab
+chamstoggletext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+chamstoggletext.BackgroundTransparency = 1.000
+chamstoggletext.BorderColor3 = Color3.fromRGB(0, 0, 0)
+chamstoggletext.Position = UDim2.new(-0.48693046, 0, 0.457304686, 0)
+chamstoggletext.Size = UDim2.new(0, 181, 0, 46)
+chamstoggletext.Font = Enum.Font.SourceSans
+chamstoggletext.Text = "chams  -"
+chamstoggletext.TextColor3 = Color3.fromRGB(255, 255, 255)
+chamstoggletext.TextSize = 14.000
+chamstoggletext.TextStrokeTransparency = 0.000
+
+nametoggle.Name = "nametoggle"
+nametoggle.Parent = esptab
+nametoggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+nametoggle.BackgroundTransparency = 1.000
+nametoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+nametoggle.BorderSizePixel = 0
+nametoggle.Position = UDim2.new(0.475409836, 0, 0.222222224, 0)
+nametoggle.Size = UDim2.new(0, 46, 0, 30)
+nametoggle.Font = Enum.Font.SourceSans
+nametoggle.Text = "N/A"
+nametoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+nametoggle.TextSize = 14.000
+nametoggle.TextStrokeTransparency = 0.000
+
+healthtoggle.Name = "healthtoggle"
+healthtoggle.Parent = esptab
+healthtoggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+healthtoggle.BackgroundTransparency = 1.000
+healthtoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+healthtoggle.BorderSizePixel = 0
+healthtoggle.Position = UDim2.new(0.475409836, 0, 0.351111114, 0)
+healthtoggle.Size = UDim2.new(0, 46, 0, 30)
+healthtoggle.Font = Enum.Font.SourceSans
+healthtoggle.Text = "N/A"
+healthtoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+healthtoggle.TextSize = 14.000
+healthtoggle.TextStrokeTransparency = 0.000
+
+chamstoggle.Name = "chamstoggle"
+chamstoggle.Parent = esptab
+chamstoggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+chamstoggle.BackgroundTransparency = 1.000
+chamstoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+chamstoggle.BorderSizePixel = 0
+chamstoggle.Position = UDim2.new(0.475409836, 0, 0.48888889, 0)
+chamstoggle.Size = UDim2.new(0, 46, 0, 30)
+chamstoggle.Font = Enum.Font.SourceSans
+chamstoggle.Text = "N/A"
+chamstoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+chamstoggle.TextSize = 14.000
+chamstoggle.TextStrokeTransparency = 0.000
+
+playergui.Name = "playergui"
+playergui.Parent = Frame_3
+playergui.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+playergui.BorderColor3 = Color3.fromRGB(0, 0, 0)
+playergui.BorderSizePixel = 0
+playergui.LayoutOrder = -3
+playergui.Position = UDim2.new(0.0163487736, 0, 0.0671256483, 0)
+playergui.Size = UDim2.new(0, 354, 0, 533)
+playergui.Visible = false
+
+TextLabel_2.Parent = playergui
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.245762706, 0, -0.0863039419, 0)
+TextLabel_2.Size = UDim2.new(0, 181, 0, 46)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Player"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextStrokeTransparency = 0.000
+
+miscgui.Name = "miscgui"
+miscgui.Parent = Frame_3
+miscgui.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+miscgui.BorderColor3 = Color3.fromRGB(0, 0, 0)
+miscgui.BorderSizePixel = 0
+miscgui.LayoutOrder = -3
+miscgui.Position = UDim2.new(0.0163487736, 0, 0.0671256483, 0)
+miscgui.Size = UDim2.new(0, 354, 0, 533)
+miscgui.Visible = false
+
+TextLabel_3.Parent = miscgui
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.245762706, 0, -0.0863039419, 0)
+TextLabel_3.Size = UDim2.new(0, 181, 0, 46)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Misc"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextStrokeTransparency = 0.000
+
+menu.Name = "menu"
+menu.Parent = miscgui
+menu.BackgroundColor3 = Color3.fromRGB(6, 29, 112)
+menu.BorderColor3 = Color3.fromRGB(0, 0, 0)
+menu.Position = UDim2.new(0.0169491526, 0, 0.0131332083, 0)
+menu.Size = UDim2.new(0, 143, 0, 51)
+
+menudecor.Name = "menu decor"
+menudecor.Parent = menu
+menudecor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+menudecor.BackgroundTransparency = 1.000
+menudecor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+menudecor.BorderSizePixel = 0
+menudecor.Position = UDim2.new(0.129714653, 0, 0, 0)
+menudecor.Size = UDim2.new(0, 104, 0, 19)
+menudecor.Font = Enum.Font.SourceSans
+menudecor.Text = "menu"
+menudecor.TextColor3 = Color3.fromRGB(255, 255, 255)
+menudecor.TextSize = 14.000
+menudecor.TextStrokeTransparency = 0.000
+
+keybindtoggle_2.Name = "keybindtoggle"
+keybindtoggle_2.Parent = menu
+keybindtoggle_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+keybindtoggle_2.BackgroundTransparency = 1.000
+keybindtoggle_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+keybindtoggle_2.BorderSizePixel = 0
+keybindtoggle_2.Position = UDim2.new(0.519962788, 0, 0.292377234, 0)
+keybindtoggle_2.Size = UDim2.new(0, 46, 0, 30)
+keybindtoggle_2.Font = Enum.Font.SourceSans
+keybindtoggle_2.Text = "N/A"
+keybindtoggle_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+keybindtoggle_2.TextSize = 14.000
+keybindtoggle_2.TextStrokeTransparency = 0.000
+
+menukeybind.Name = "menu keybind"
+menukeybind.Parent = menu
+menukeybind.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+menukeybind.BackgroundTransparency = 1.000
+menukeybind.BorderColor3 = Color3.fromRGB(0, 0, 0)
+menukeybind.BorderSizePixel = 0
+menukeybind.Position = UDim2.new(-0.144159064, 0, 0.412210494, 0)
+menukeybind.Size = UDim2.new(0, 104, 0, 19)
+menukeybind.Font = Enum.Font.SourceSans
+menukeybind.Text = "Keybind  -"
+menukeybind.TextColor3 = Color3.fromRGB(255, 255, 255)
+menukeybind.TextSize = 14.000
+menukeybind.TextStrokeTransparency = 0.000
+
+logo1.Name = "logo1"
+logo1.Parent = Frame_3
+logo1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+logo1.BackgroundTransparency = 1.000
+logo1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+logo1.BorderSizePixel = 0
+logo1.Position = UDim2.new(0.277929157, 0, 0.332185894, 0)
+logo1.Size = UDim2.new(0, 93, 0, 90)
+logo1.Visible = false
+logo1.Font = Enum.Font.Michroma
+logo1.Text = "Z"
+logo1.TextColor3 = Color3.fromRGB(0, 0, 0)
+logo1.TextScaled = true
+logo1.TextSize = 14.000
+logo1.TextWrapped = true
+
+logo2.Name = "logo2"
+logo2.Parent = Frame_3
+logo2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+logo2.BackgroundTransparency = 1.000
+logo2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+logo2.BorderSizePixel = 0
+logo2.Position = UDim2.new(0.463215262, 0, 0.421686739, 0)
+logo2.Size = UDim2.new(0, 67, 0, 62)
+logo2.Visible = false
+logo2.Font = Enum.Font.Michroma
+logo2.Text = "W"
+logo2.TextColor3 = Color3.fromRGB(0, 0, 0)
+logo2.TextScaled = true
+logo2.TextSize = 14.000
+logo2.TextWrapped = true
+
+logo3.Name = "logo3"
+logo3.Parent = Frame_3
+logo3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+logo3.BackgroundTransparency = 1.000
+logo3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+logo3.BorderSizePixel = 0
+logo3.Position = UDim2.new(0.476839244, 0, 0.368330479, 0)
+logo3.Size = UDim2.new(0, 57, 0, 69)
+logo3.Visible = false
+logo3.Font = Enum.Font.Michroma
+logo3.Text = "ex"
+logo3.TextColor3 = Color3.fromRGB(0, 0, 0)
+logo3.TextScaled = true
+logo3.TextSize = 14.000
+logo3.TextWrapped = true
+
+logo4.Name = "logo4"
+logo4.Parent = Frame_3
+logo4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+logo4.BackgroundTransparency = 1.000
+logo4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+logo4.BorderSizePixel = 0
+logo4.Position = UDim2.new(0.615803838, 0, 0.459552497, 0)
+logo4.Size = UDim2.new(0, 37, 0, 40)
+logo4.Visible = false
+logo4.Font = Enum.Font.Michroma
+logo4.Text = "are"
+logo4.TextColor3 = Color3.fromRGB(0, 0, 0)
+logo4.TextScaled = true
+logo4.TextSize = 14.000
+logo4.TextWrapped = true
+
+aimbot.Name = "aimbot"
+aimbot.Parent = Frame_2
+aimbot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+aimbot.BackgroundTransparency = 0.900
+aimbot.BorderColor3 = Color3.fromRGB(0, 0, 0)
+aimbot.BorderSizePixel = 0
+aimbot.Position = UDim2.new(0.0233766232, 0, 0.00967741944, 0)
+aimbot.Size = UDim2.new(0, 87, 0, 24)
+aimbot.Font = Enum.Font.SourceSans
+aimbot.Text = "Aim"
+aimbot.TextColor3 = Color3.fromRGB(255, 255, 255)
+aimbot.TextSize = 14.000
+aimbot.TextStrokeTransparency = 0.000
+
+visuals.Name = "visuals"
+visuals.Parent = Frame_2
+visuals.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+visuals.BackgroundTransparency = 0.900
+visuals.BorderColor3 = Color3.fromRGB(0, 0, 0)
+visuals.BorderSizePixel = 0
+visuals.Position = UDim2.new(0.267532468, 0, 0.00967741944, 0)
+visuals.Size = UDim2.new(0, 87, 0, 24)
+visuals.Font = Enum.Font.SourceSans
+visuals.Text = "Visuals"
+visuals.TextColor3 = Color3.fromRGB(255, 255, 255)
+visuals.TextSize = 14.000
+visuals.TextStrokeTransparency = 0.000
+
+player.Name = "player"
+player.Parent = Frame_2
+player.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+player.BackgroundTransparency = 0.900
+player.BorderColor3 = Color3.fromRGB(0, 0, 0)
+player.BorderSizePixel = 0
+player.Position = UDim2.new(0.5090909, 0, 0.00967741944, 0)
+player.Size = UDim2.new(0, 87, 0, 24)
+player.Font = Enum.Font.SourceSans
+player.Text = "Player"
+player.TextColor3 = Color3.fromRGB(255, 255, 255)
+player.TextSize = 14.000
+player.TextStrokeTransparency = 0.000
+
+misc.Name = "misc"
+misc.Parent = Frame_2
+misc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+misc.BackgroundTransparency = 0.900
+misc.BorderColor3 = Color3.fromRGB(0, 0, 0)
+misc.BorderSizePixel = 0
+misc.Position = UDim2.new(0.750649333, 0, 0.00967741944, 0)
+misc.Size = UDim2.new(0, 87, 0, 24)
+misc.Font = Enum.Font.SourceSans
+misc.Text = "Misc"
+misc.TextColor3 = Color3.fromRGB(255, 255, 255)
+misc.TextSize = 14.000
+misc.TextStrokeTransparency = 0.000
+
+lockdecor_2.Name = "lock decor"
+lockdecor_2.Parent = Frame
+lockdecor_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+lockdecor_2.BackgroundTransparency = 1.000
+lockdecor_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+lockdecor_2.BorderSizePixel = 0
+lockdecor_2.Position = UDim2.new(0.373770446, 0, 0, 0)
+lockdecor_2.Size = UDim2.new(0, 104, 0, 19)
+lockdecor_2.ZIndex = 3
+lockdecor_2.Font = Enum.Font.SourceSans
+lockdecor_2.Text = "zexware"
+lockdecor_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+lockdecor_2.TextSize = 14.000
+lockdecor_2.TextStrokeTransparency = 0.000
+
+DragArea.Name = "DragArea"
+DragArea.Parent = Frame
+DragArea.BackgroundColor3 = Color3.fromRGB(6, 29, 112)
+DragArea.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DragArea.BorderSizePixel = 0
+DragArea.Size = UDim2.new(0, 399, 0, 18)
+
+-- Scripts:
+
+local function IUMKZZ_fake_script() -- legitlock.LocalScript 
+	local script = Instance.new('LocalScript', legitlock)
+
+	local player = game.Players.LocalPlayer
+	local mouse = player:GetMouse()
+	
+	local locktoggle = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.legitlock.lockaimtoggle
+	local fovshow = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.legitlock.showfovtoggle
+	local smoothnesstoggle = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.legitlock.smoothnesstoggle
+	
+	locktoggle.Text = "off"
+	fovshow.Text = "off"
+	smoothnesstoggle.Text = "off"
+	
+	locktoggle.mouseButton1Click:Connect(function()
+		if locktoggle.Text == "off" then
+			locktoggle.Text = "on"
+		elseif locktoggle.Text == "on" then
+			locktoggle.Text = "off"
+		end
+	end)
+	
+	fovshow.MouseButton1Click:Connect(function()
+		if fovshow.Text == "off" then
+			fovshow.Text = "on"
+		elseif fovshow.Text == "on" then
+			fovshow.Text = "off"
+			end
+	end)
+	
+	smoothnesstoggle.MouseButton1Click:Connect(function()
+		if smoothnesstoggle.Text == "off" then
+			smoothnesstoggle.Text = "on"
+		elseif smoothnesstoggle.Text == "on" then
+			smoothnesstoggle.Text = "off"
+		end
+	end)
+	
+	
+	
+	
+end
+coroutine.wrap(IUMKZZ_fake_script)()
+local function VBGZAC_fake_script() -- sliderbar.LocalScript 
+	local script = Instance.new('LocalScript', sliderbar)
+
+	local player = game.Players.LocalPlayer
+	local slider = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.legitlock.sliderbar.slider
+	local dragging = false
+	local fill = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.legitlock.sliderbar.fill
+	local mouse = player:GetMouse()
+	local sliderBar = script.Parent
+	
+	slider.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+		end
+	end)
+	
+	slider.InputEnded:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = false
+		end
+	end)
+	
+	game:GetService("UserInputService").InputChanged:Connect(function(input)
+		if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+			local x = math.clamp(
+				(mouse.X - sliderBar.AbsolutePosition.X) / sliderBar.AbsoluteSize.X,
+				0,
+				1
+			)
+	
+			slider.Position = UDim2.new(x, 0, 0, 0)
+			fill.Size = UDim2.new(x, 0, 1, 0)
+		end
+	end)
+	
+end
+coroutine.wrap(VBGZAC_fake_script)()
+local function WZVAGNU_fake_script() -- sliderbarfov.LocalScript 
+	local script = Instance.new('LocalScript', sliderbarfov)
+
+	local player = game.Players.LocalPlayer
+	local slider = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.legitlock.sliderbarfov.slider
+	local dragging = false
+	local fill = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.legitlock.sliderbarfov.fill
+	local mouse = player:GetMouse()
+	local sliderBar = script.Parent
+	
+	slider.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+		end
+	end)
+	
+	slider.InputEnded:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = false
+		end
+	end)
+	
+	game:GetService("UserInputService").InputChanged:Connect(function(input)
+		if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+			local x = math.clamp(
+				(mouse.X - sliderBar.AbsolutePosition.X) / sliderBar.AbsoluteSize.X,
+				0,
+				1
+			)
+	
+			slider.Position = UDim2.new(x, 0, 0, 0)
+			fill.Size = UDim2.new(x, 0, 1, 0)
+		end
+	end)
+	
+end
+coroutine.wrap(WZVAGNU_fake_script)()
+local function QIELTGV_fake_script() -- keybindtoggle.LocalScript 
+	local script = Instance.new('LocalScript', keybindtoggle)
+
+	local UserInputService = game:GetService("UserInputService")
+	local textButton = script.Parent
+	
+	-- Function to start keybinding
+	local function bindKey()
+		textButton.Text = "Setting"
+	
+		-- Temporary connection for user input
+		local inputConnection
+		inputConnection = UserInputService.InputBegan:Connect(function(input, gameProcessed)
+			if gameProcessed then return end  -- Ignore inputs used by Roblox UI
+	
+			local keyText = ""
+	
+			if input.UserInputType == Enum.UserInputType.Keyboard then
+				keyText = input.KeyCode.Name
+			elseif input.UserInputType == Enum.UserInputType.MouseButton1 then
+				keyText = "MouseButton1"
+			elseif input.UserInputType == Enum.UserInputType.MouseButton2 then
+				keyText = "MouseButton2"
+			elseif input.UserInputType == Enum.UserInputType.MouseButton3 then
+				keyText = "MouseButton3"
+			else
+				keyText = input.UserInputType.Name -- Fallback for other inputs
+			end
+	
+			textButton.Text = keyText
+			inputConnection:Disconnect()  -- Stop listening after one input
+		end)
+	end
+	
+	-- Detect click on the TextButton
+	textButton.MouseButton1Click:Connect(bindKey)
+end
+coroutine.wrap(QIELTGV_fake_script)()
+local function MBRY_fake_script() -- aimparttoggle.LocalScript 
+	local script = Instance.new('LocalScript', aimparttoggle)
+
+	local player = game.Players.LocalPlayer
+	local mouse = player:GetMouse()
+	local button = script.Parent
+	
+	button.Text = "head"
+	
+	button.MouseButton1Click:Connect(function()
+		if button.Text == "body" then
+			button.Text = "head"
+		elseif button.Text == "head" then
+			button.Text = "body"
+		end
+	end)
+end
+coroutine.wrap(MBRY_fake_script)()
+local function VUNXB_fake_script() -- esptab.LocalScript 
+	local script = Instance.new('LocalScript', esptab)
+
+	local player = game.Players.LocalPlayer
+	local mouse = player:GetMouse()
+	
+	local esptoggle = player.PlayerGui.pwrware.Frame.Frame.Frame.visualsgui.esptab.esptoggle
+	local nametoggle = player.PlayerGui.pwrware.Frame.Frame.Frame.visualsgui.esptab.nametoggle
+	local healthtoggle = player.PlayerGui.pwrware.Frame.Frame.Frame.visualsgui.esptab.healthtoggle
+	local chamstoggle = player.PlayerGui.pwrware.Frame.Frame.Frame.visualsgui.esptab.chamstoggle
+	
+	
+	esptoggle.Text = "off"
+	nametoggle.Text = "off"
+	healthtoggle.Text = "off"
+	chamstoggle.Text = "off"
+	
+	
+	esptoggle.mouseButton1Click:Connect(function()
+		if esptoggle.Text == "off" then
+			esptoggle.Text = "on"
+		elseif esptoggle.Text == "on" then
+			esptoggle.Text = "off"
+		end
+	end)
+	
+	nametoggle.mouseButton1Click:Connect(function()
+		if nametoggle.Text == "off" then
+			nametoggle.Text = "on"
+		elseif nametoggle.Text == "on" then
+			nametoggle.Text = "off"
+		end
+	end)
+	
+	healthtoggle.mouseButton1Click:Connect(function()
+		if healthtoggle.Text == "off" then
+			healthtoggle.Text = "on"
+		elseif healthtoggle.Text == "on" then
+			healthtoggle.Text = "off"
+		end
+	end)
+	
+	chamstoggle.mouseButton1Click:Connect(function()
+		if chamstoggle.Text == "off" then
+			chamstoggle.Text = "on"
+		elseif chamstoggle.Text == "on" then
+			chamstoggle.Text = "off"
+		end
+	end)
+	
+	
+	
+end
+coroutine.wrap(VUNXB_fake_script)()
+local function EXQBG_fake_script() -- keybindtoggle_2.LocalScript 
+	local script = Instance.new('LocalScript', keybindtoggle_2)
+
+	local UserInputService = game:GetService("UserInputService")
+	local textButton = script.Parent
+	
+	-- Store chosen key
+	local boundInputType
+	local boundKey
+	local isVisible = true  -- Keep track of the visibility state
+	
+	-- Function to start keybinding
+	local function bindKey()
+		textButton.Text = "Setting"
+	
+		-- Temporary connection for user input
+		local inputConnection
+		inputConnection = UserInputService.InputBegan:Connect(function(input, gameProcessed)
+			if gameProcessed then return end  -- Ignore inputs used by Roblox UI
+	
+			local keyText = ""
+	
+			if input.UserInputType == Enum.UserInputType.Keyboard then
+				keyText = input.KeyCode.Name
+				boundInputType = Enum.UserInputType.Keyboard
+				boundKey = input.KeyCode.Name
+			elseif input.UserInputType == Enum.UserInputType.MouseButton1 then
+				keyText = "MouseButton1"
+				boundInputType = Enum.UserInputType.MouseButton1
+				boundKey = "MouseButton1"
+			elseif input.UserInputType == Enum.UserInputType.MouseButton2 then
+				keyText = "MouseButton2"
+				boundInputType = Enum.UserInputType.MouseButton2
+				boundKey = "MouseButton2"
+			elseif input.UserInputType == Enum.UserInputType.MouseButton3 then
+				keyText = "MouseButton3"
+				boundInputType = Enum.UserInputType.MouseButton3
+				boundKey = "MouseButton3"
+			else
+				keyText = input.UserInputType.Name
+				boundInputType = input.UserInputType
+				boundKey = input.UserInputType.Name
+			end
+	
+			textButton.Text = keyText
+			inputConnection:Disconnect()  -- Stop listening after one input
+		end)
+	end
+	
+	-- Detect click on the TextButton to set key
+	textButton.MouseButton1Click:Connect(bindKey)
+	
+	-- Listen for that key later (toggle visibility of GUI)
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+		if not boundInputType then return end
+	
+		-- If keyboard
+		if boundInputType == Enum.UserInputType.Keyboard then
+			if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode.Name == boundKey then
+				-- Toggle pwrware GUI visibility
+				local playerGui = game.Players.LocalPlayer:FindFirstChild("PlayerGui")
+				if playerGui then
+					local pwrware = playerGui:FindFirstChild("pwrware")
+					if pwrware then
+						-- Toggle the visibility state
+						isVisible = not isVisible
+						pwrware.Frame.Visible = isVisible
+					end
+				end
+			end
+	
+			-- If mouse button
+		elseif input.UserInputType == boundInputType then
+			local playerGui = game.Players.LocalPlayer:FindFirstChild("PlayerGui")
+			if playerGui then
+				local pwrware = playerGui:FindFirstChild("pwrware")
+				if pwrware then
+					-- Toggle the visibility state
+					isVisible = not isVisible
+					pwrware.Frame.Visible = isVisible
+				end
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(EXQBG_fake_script)()
+local function VKMUK_fake_script() -- Frame_3.LocalScript 
+	local script = Instance.new('LocalScript', Frame_3)
+
+	local player = game.Players.LocalPlayer
+	local aimbotgui = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui
+	local visualsgui = player.PlayerGui.pwrware.Frame.Frame.Frame.visualsgui
+	local playergui = player.PlayerGui.pwrware.Frame.Frame.Frame.playergui
+	local miscgui = player.PlayerGui.pwrware.Frame.Frame.Frame.miscgui
+	local aimbotbutton = player.PlayerGui.pwrware.Frame.Frame.aimbot
+	local visualsbutton = player.PlayerGui.pwrware.Frame.Frame.visuals
+	local miscbutton = player.PlayerGui.pwrware.Frame.Frame.misc
+	local playerbutton = player.PlayerGui.pwrware.Frame.Frame.player
+	local logo1 = player.PlayerGui.pwrware.Frame.Frame.Frame.logo1
+	local logo2 = player.PlayerGui.pwrware.Frame.Frame.Frame.logo2
+	local logo3 = player.PlayerGui.pwrware.Frame.Frame.Frame.logo3
+	local logo4 = player.PlayerGui.pwrware.Frame.Frame.Frame.logo4
+	
+	logo1.Visible = true
+	logo2.Visible = true
+	logo3.Visible = true
+	logo4.Visible = true
+	
+	
+	local function hideall()
+		aimbotgui.Visible = false
+		visualsgui.Visible = false
+		playergui.Visible = false
+		miscgui.Visible = false
+		logo1.Visible = false
+		logo2.Visible = false
+		logo3.Visible = false
+		logo4.Visible = false
+	end
+	
+	aimbotbutton.MouseButton1Click:Connect(function()
+		hideall()
+		aimbotgui.Visible = true
+	end)
+	visualsbutton.MouseButton1Click:Connect(function()
+		hideall()
+		visualsgui.Visible = true
+	end)
+	playerbutton.MouseButton1Click:Connect(function()
+		hideall()
+		playergui.Visible = true
+	end)
+	miscbutton.MouseButton1Click:Connect(function()
+		hideall()
+		miscgui.Visible = true
+	end)
+	
+end
+coroutine.wrap(VKMUK_fake_script)()
+local function KUNMCJM_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local gui = script.Parent -- The frame to drag
+	local dragging = false
+	local dragInput
+	local dragStart
+	local startPos
+	
+	-- Optional: create a specific area inside the frame to drag
+	-- If you want the whole frame draggable, just use gui itself
+	local dragHandle = gui:WaitForChild("DragArea") -- e.g., a small Frame or TextLabel at the top
+	
+	-- Update position
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(
+			startPos.X.Scale,
+			startPos.X.Offset + delta.X,
+			startPos.Y.Scale,
+			startPos.Y.Offset + delta.Y
+		)
+	end
+	
+	-- Start dragging
+	dragHandle.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+	
+			-- Stop dragging
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	-- Track mouse movement over the handle
+	dragHandle.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement then
+			dragInput = input
+		end
+	end)
+	
+	-- Move the frame
+	game:GetService("UserInputService").InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+	
+end
+coroutine.wrap(KUNMCJM_fake_script)()
+local function UIBS_fake_script() -- Frame.fovenable 
+	local script = Instance.new('LocalScript', Frame)
+
+	local Players = game:GetService("Players")
+	local UIS = game:GetService("UserInputService")
+	local RunService = game:GetService("RunService")
+	local GuiService = game:GetService("GuiService")
+	local camera = workspace.CurrentCamera
+	local localPlayer = Players.LocalPlayer
+	
+	local gui = script.Parent
+	local screenGui = gui.Parent
+	
+	-- ===== UI REFERENCES =====
+	local legitlock = gui:WaitForChild("Frame"):WaitForChild("Frame"):WaitForChild("aimbotgui"):WaitForChild("legitlock")
+	local showFOVToggle = legitlock:WaitForChild("showfovtoggle")
+	local sliderbar = legitlock:WaitForChild("sliderbar")
+	local sliderBarKnob = sliderbar:WaitForChild("slider")
+	
+	local lockAimToggle = legitlock:WaitForChild("lockaimtoggle")
+	local smoothnessToggle = legitlock:WaitForChild("smoothnesstoggle")
+	local keybindtoggle = legitlock:WaitForChild("keybindtoggle")
+	local aimparttoggle = legitlock:WaitForChild("aimparttoggle")
+	
+	local sliderbarfov = legitlock:WaitForChild("sliderbarfov")
+	local sliderFOVKnob = sliderbarfov:WaitForChild("slider")
+	
+	-- ===== VARIABLES =====
+	local draggingFOV = false
+	local draggingSmooth = false
+	
+	-- FOV Size
+	local minFOV = 50
+	local maxFOV = 400
+	local currentFOVSize = 200
+	
+	-- Smoothness
+	local minSmooth = 0.01
+	local maxSmooth = 0.30
+	local currentSmooth = 0.15
+	
+	-- Key / Mouse hold tracking
+	local holdKey = false
+	
+	-- ===== CREATE FOV CIRCLE =====
+	local fovCircle = Instance.new("Frame")
+	fovCircle.AnchorPoint = Vector2.new(0.5, 0.5)
+	fovCircle.Size = UDim2.fromOffset(currentFOVSize, currentFOVSize)
+	fovCircle.BackgroundTransparency = 1
+	fovCircle.Visible = false
+	fovCircle.Parent = screenGui
+	
+	local corner = Instance.new("UICorner")
+	corner.CornerRadius = UDim.new(1, 0)
+	corner.Parent = fovCircle
+	
+	local stroke = Instance.new("UIStroke")
+	stroke.Thickness = 1
+	stroke.Color = Color3.fromRGB(255, 255, 255)
+	stroke.Parent = fovCircle
+	
+	-- ===== FOV SIZE SLIDER =====
+	sliderBarKnob.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			draggingFOV = true
+		end
+	end)
+	
+	UIS.InputEnded:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			draggingFOV = false
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if draggingFOV and input.UserInputType == Enum.UserInputType.MouseMovement then
+			local mouseX = input.Position.X
+			local barX = sliderbar.AbsolutePosition.X
+			local barW = sliderbar.AbsoluteSize.X
+	
+			local alpha = math.clamp((mouseX - barX) / barW, 0, 1)
+			sliderBarKnob.Position = UDim2.new(alpha, 0, 0.5, 0)
+	
+			currentFOVSize = minFOV + (maxFOV - minFOV) * alpha
+			fovCircle.Size = UDim2.fromOffset(currentFOVSize, currentFOVSize)
+		end
+	end)
+	
+	-- ===== SMOOTHNESS SLIDER =====
+	sliderFOVKnob.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			draggingSmooth = true
+		end
+	end)
+	
+	UIS.InputEnded:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			draggingSmooth = false
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if draggingSmooth and input.UserInputType == Enum.UserInputType.MouseMovement then
+			local mouseX = input.Position.X
+			local barX = sliderbarfov.AbsolutePosition.X
+			local barW = sliderbarfov.AbsoluteSize.X
+	
+			local alpha = math.clamp((mouseX - barX) / barW, 0, 1)
+			sliderFOVKnob.Position = UDim2.new(alpha, 0, 0.5, 0)
+	
+			currentSmooth = minSmooth + (maxSmooth - minSmooth) * (1 - alpha)
+		end
+	end)
+	
+	-- ===== KEY & MOUSE DETECTION =====
+	UIS.InputBegan:Connect(function(input, processed)
+		if processed then return end
+	
+		local bindText = keybindtoggle.Text:lower()
+	
+		if bindText == "n/a" or bindText == "setting" then
+			holdKey = false
+			return
+		end
+	
+		-- Mouse buttons
+		if bindText == "mousebutton1" and input.UserInputType == Enum.UserInputType.MouseButton1 then
+			holdKey = true
+		elseif bindText == "mousebutton2" and input.UserInputType == Enum.UserInputType.MouseButton2 then
+			holdKey = true
+		elseif bindText == "mousebutton3" and input.UserInputType == Enum.UserInputType.MouseButton3 then
+			holdKey = true
+	
+			-- Keyboard
+		elseif input.UserInputType == Enum.UserInputType.Keyboard then
+			if input.KeyCode.Name:lower() == bindText then
+				holdKey = true
+			end
+		end
+	end)
+	
+	UIS.InputEnded:Connect(function(input)
+		local bindText = keybindtoggle.Text:lower()
+	
+		if bindText == "n/a" or bindText == "setting" then
+			holdKey = false
+			return
+		end
+	
+		if bindText == "mousebutton1" and input.UserInputType == Enum.UserInputType.MouseButton1 then
+			holdKey = false
+		elseif bindText == "mousebutton2" and input.UserInputType == Enum.UserInputType.MouseButton2 then
+			holdKey = false
+		elseif bindText == "mousebutton3" and input.UserInputType == Enum.UserInputType.MouseButton3 then
+			holdKey = false
+	
+		elseif input.UserInputType == Enum.UserInputType.Keyboard then
+			if input.KeyCode.Name:lower() == bindText then
+				holdKey = false
+			end
+		end
+	end)
+	
+	-- ===== GET CLOSEST TARGET =====
+	local function getClosestTarget()
+		local mp = UIS:GetMouseLocation()
+		local closest = nil
+		local closestDist = math.huge
+	
+		for _, plr in ipairs(Players:GetPlayers()) do
+			if plr ~= localPlayer and plr.Character then
+				local rootPart = plr.Character:FindFirstChild(
+					aimparttoggle.Text:lower() == "head" and "Head" or "HumanoidRootPart"
+				)
+	
+				if rootPart then
+					local screenPos, onScreen = camera:WorldToViewportPoint(rootPart.Position)
+					if onScreen then
+						local dx = screenPos.X - mp.X
+						local dy = screenPos.Y - mp.Y
+						local dist = math.sqrt(dx*dx + dy*dy)
+	
+						if dist <= (currentFOVSize / 2) and dist < closestDist then
+							closestDist = dist
+							closest = rootPart
+						end
+					end
+				end
+			end
+		end
+	
+		return closest
+	end
+	
+	-- ===== MAIN CAMERA LOOP =====
+	RunService.RenderStepped:Connect(function()
+		local mp = UIS:GetMouseLocation()
+		local inset = GuiService:GetGuiInset()
+	
+		-- FOV circle visuals
+		if showFOVToggle.Text:lower() == "on" then
+			fovCircle.Visible = true
+			fovCircle.Position = UDim2.new(0, mp.X, 0, mp.Y - inset.Y)
+		else
+			fovCircle.Visible = false
+		end
+	
+		-- AIM LOCK
+		if lockAimToggle.Text:lower() == "on" and holdKey then
+			local target = getClosestTarget()
+			if target then
+				local camPos = camera.CFrame.Position
+				local desiredCFrame = CFrame.new(camPos, target.Position)
+	
+				if smoothnessToggle.Text:lower() == "off" then
+					camera.CFrame = desiredCFrame
+				else
+					camera.CFrame = camera.CFrame:Lerp(desiredCFrame, currentSmooth)
+				end
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(UIBS_fake_script)()
+local function JABF_fake_script() -- pwrware.ESPController 
+	local script = Instance.new('LocalScript', pwrware)
+
+	-- SERVICES
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local camera = workspace.CurrentCamera
+	
+	local localPlayer = Players.LocalPlayer
+	local rootGui = localPlayer:WaitForChild("PlayerGui"):WaitForChild("pwrware")
+	
+	-- UI TOGGLES
+	local settingsGui = rootGui:WaitForChild("Frame"):WaitForChild("Frame"):WaitForChild("Frame"):WaitForChild("visualsgui"):WaitForChild("esptab")
+	local espToggle = settingsGui:WaitForChild("esptoggle")
+	local nameToggle = settingsGui:WaitForChild("nametoggle")
+	local healthToggle = settingsGui:WaitForChild("healthtoggle")
+	local chamsToggle = settingsGui:WaitForChild("chamstoggle")
+	
+	-- STORAGE
+	local espData = {}
+	
+	-- CREATE ESP ELEMENTS
+	local function createESP(player)
+		local data = {}
+	
+		-- Chams
+		local highlight = Instance.new("Highlight")
+		highlight.Adornee = nil
+		highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+		highlight.Enabled = false
+		highlight.Parent = rootGui
+		data.highlight = highlight
+	
+		-- Name Billboard
+		local nameGui = Instance.new("BillboardGui")
+		nameGui.Adornee = nil
+		nameGui.AlwaysOnTop = true
+		nameGui.Parent = rootGui
+	
+		local nameLabel = Instance.new("TextLabel")
+		nameLabel.BackgroundTransparency = 1
+		nameLabel.TextColor3 = Color3.new(1,1,1)
+		nameLabel.TextStrokeColor3 = Color3.new(0,0,0)
+		nameLabel.TextStrokeTransparency = 0.5
+		nameLabel.TextScaled = true
+		nameLabel.Font = Enum.Font.SourceSansBold
+		nameLabel.Size = UDim2.new(1,0,1,0)
+		nameLabel.Parent = nameGui
+		data.nameGUI = nameGui
+		data.nameLabel = nameLabel
+	
+		-- Health Billboard (longer)
+		local healthGui = Instance.new("BillboardGui")
+		healthGui.Adornee = nil
+		healthGui.AlwaysOnTop = true
+		healthGui.Parent = rootGui
+	
+		local healthBG = Instance.new("Frame", healthGui)
+		healthBG.BackgroundColor3 = Color3.new(0,0,0)
+		healthBG.BorderSizePixel = 0
+		healthBG.Size = UDim2.new(1,0,1,0)
+	
+		local healthBar = Instance.new("Frame", healthBG)
+		healthBar.BackgroundColor3 = Color3.new(0,1,0)
+		healthBar.Size = UDim2.new(1,0,1,0)
+		data.healthGUI = healthGui
+		data.healthBar = healthBar
+	
+		espData[player] = data
+	end
+	
+	local function removeESP(player)
+		local data = espData[player]
+		if data then
+			if data.highlight then data.highlight:Destroy() end
+			if data.nameGUI then data.nameGUI:Destroy() end
+			if data.healthGUI then data.healthGUI:Destroy() end
+			espData[player] = nil
+		end
+	end
+	
+	-- INIT PLAYERS
+	for _,plr in ipairs(Players:GetPlayers()) do
+		if plr ~= localPlayer then
+			createESP(plr)
+		end
+	end
+	Players.PlayerAdded:Connect(function(plr)
+		if plr ~= localPlayer then createESP(plr) end
+	end)
+	Players.PlayerRemoving:Connect(removeESP)
+	
+	-- UPDATE LOOP
+	RunService.RenderStepped:Connect(function()
+		local showESP    = espToggle.Text:lower() == "on"
+		local showName   = nameToggle.Text:lower() == "on"
+		local showHealth = healthToggle.Text:lower() == "on"
+		local showChams  = chamsToggle.Text:lower() == "on"
+	
+		for player, data in pairs(espData) do
+			local char = player.Character
+			if not showESP or not char or not char:FindFirstChild("HumanoidRootPart") then
+				-- Instead of clearing Adornee, just disable GUI elements
+				data.highlight.Enabled = false
+				data.nameGUI.Enabled = false
+				data.healthGUI.Enabled = false
+			else
+				local hrp = char.HumanoidRootPart
+				local humanoid = char:FindFirstChildOfClass("Humanoid")
+				local dist = (camera.CFrame.Position - hrp.Position).Magnitude
+				-- Cap distance scaling at 200 studs
+				local scale = math.clamp(dist / 30, 1, 6)
+	
+				-- CHAMS (white)
+				if showChams then
+					data.highlight.Adornee = char
+					data.highlight.Enabled = true
+					data.highlight.FillColor = Color3.new(1,1,1)
+					data.highlight.FillTransparency = 0.6
+					data.highlight.OutlineColor = Color3.new(1,1,1)
+					data.highlight.OutlineTransparency = 0
+				else
+					data.highlight.Enabled = false
+				end
+	
+				-- NAME ESP
+				if showName then
+					data.nameGUI.Adornee = hrp
+					-- place below player
+					data.nameGUI.StudsOffsetWorldSpace = Vector3.new(0, -humanoid.HipHeight - 1.5, 0)
+					data.nameLabel.Text = player.Name
+					-- scale bigger with distance
+					data.nameGUI.Size = UDim2.fromScale(2 * scale, 1 * scale)
+					data.nameGUI.Enabled = true
+				else
+					data.nameGUI.Enabled = false
+				end
+	
+				-- HEALTH ESP
+				if showHealth and humanoid then
+					data.healthGUI.Adornee = hrp
+					-- offset beside torso, move health ESP lower
+					local camRight = camera.CFrame.RightVector
+					data.healthGUI.StudsOffsetWorldSpace = Vector3.new(camRight.X * 2, humanoid.HipHeight - 1.5, camRight.Z * 2)
+					-- make health bar tall (head to feet relative)
+					data.healthGUI.Size = UDim2.fromScale(0.15 * scale, (humanoid.HipHeight + 1) * scale)
+					local pct = math.clamp(humanoid.Health / humanoid.MaxHealth, 0, 1)
+					data.healthBar.Size = UDim2.new(pct, 0, 1, 0)
+					-- color change
+					if pct > 0.5 then
+						data.healthBar.BackgroundColor3 = Color3.fromRGB(0,255,0)
+					elseif pct > 0.2 then
+						data.healthBar.BackgroundColor3 = Color3.fromRGB(255,255,0)
+					else
+						data.healthBar.BackgroundColor3 = Color3.fromRGB(255,0,0)
+					end
+					data.healthGUI.Enabled = true
+				else
+					data.healthGUI.Enabled = false
+				end
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(JABF_fake_script)()
+local function LWNRVUU_fake_script() -- pwrware.LocalScript 
+	local script = Instance.new('LocalScript', pwrware)
+
+	-- LocalScript inside ScreenGui (pwrware or your ScreenGui)
+	local player = game.Players.LocalPlayer
+	local gui = player.PlayerGui:WaitForChild("pwrware")
+	local esptoggle = gui.Frame.Frame.visualsgui.esptab.esptoggle
+	local nametoggle = gui.Frame.Frame.visualsgui.esptab.nametoggle
+	local healthtoggle = gui.Frame.Frame.visualsgui.esptab.healthtoggle
+	local chamstoggle = gui.Frame.Frame.visualsgui.esptab.chamstoggle
+	local lockAimToggle = gui.Frame.Frame.aimbotgui.lockaimtoggle
+	
+	local settings = {}  -- Table to store player settings
+	
+	-- Function to save settings
+	local function saveSettings()
+		settings["esp"] = esptoggle.Text:lower() == "on"
+		settings["name"] = nametoggle.Text:lower() == "on"
+		settings["health"] = healthtoggle.Text:lower() == "on"
+		settings["chams"] = chamstoggle.Text:lower() == "on"
+		settings["lockAim"] = lockAimToggle.Text:lower() == "on"
+	
+		-- Send settings to server to save them
+		game.ReplicatedStorage.SaveSettings:FireServer(settings)
+	end
+	
+	-- Listen for setting changes and save them
+	esptoggle.MouseButton1Click:Connect(saveSettings)
+	nametoggle.MouseButton1Click:Connect(saveSettings)
+	healthtoggle.MouseButton1Click:Connect(saveSettings)
+	chamstoggle.MouseButton1Click:Connect(saveSettings)
+	lockAimToggle.MouseButton1Click:Connect(saveSettings)
+	
+	-- Call saveSettings when player leaves or respawns
+	game.Players.LocalPlayer.CharacterAdded:Connect(function()
+		-- Restore settings on respawn
+		game.ReplicatedStorage.GetSettings:FireServer(function(savedSettings)
+			if savedSettings then
+				settings = savedSettings
+				-- Apply saved settings to UI elements (set text based on the saved boolean values)
+				esptoggle.Text = settings["esp"] and "on" or "off"
+				nametoggle.Text = settings["name"] and "on" or "off"
+				healthtoggle.Text = settings["health"] and "on" or "off"
+				chamstoggle.Text = settings["chams"] and "on" or "off"
+				lockAimToggle.Text = settings["lockAim"] and "on" or "off"
+			end
+		end)
+	end)
+	
+end
+coroutine.wrap(LWNRVUU_fake_script)()
