@@ -1,8 +1,43 @@
--- Gui to Lua
--- Version: 3.2
+--zexware  
 
--- Instances:
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+print("Loading zexware")
+wait(1)
+print("Loading zexware.")
+wait(1)
+print("Loading zexware..")
+wait(1)
+print("Loading zexware...")
+wait(1)
+print("Finished!")
 local pwrware = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local Frame_2 = Instance.new("Frame")
