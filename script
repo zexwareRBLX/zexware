@@ -42,42 +42,51 @@ wait(1)
 print("Loading zexware...")
 wait(1)
 print("Finished!")
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local pwrware = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local Frame_2 = Instance.new("Frame")
 local Frame_3 = Instance.new("Frame")
 local aimbotgui = Instance.new("Frame")
 local title = Instance.new("TextLabel")
-local legitlock = Instance.new("Frame")
-local aimtext = Instance.new("TextLabel")
-local lockaimtoggle = Instance.new("TextButton")
-local lockdecor = Instance.new("TextLabel")
-local fovtext = Instance.new("TextLabel")
-local sliderbar = Instance.new("Frame")
-local slider = Instance.new("Frame")
-local fill = Instance.new("Frame")
-local sliderbar1 = Instance.new("Frame")
-local showfovtoggle = Instance.new("TextButton")
-local smoothnesstoggle = Instance.new("TextButton")
-local smoothnesstext = Instance.new("TextLabel")
-local sliderbarfov = Instance.new("Frame")
-local slider_2 = Instance.new("Frame")
-local fill_2 = Instance.new("Frame")
-local sliderbar1_2 = Instance.new("Frame")
-local keybindtext = Instance.new("TextLabel")
-local keybindtoggle = Instance.new("TextButton")
-local aimparttext = Instance.new("TextLabel")
-local aimparttoggle = Instance.new("TextButton")
 local silent = Instance.new("Frame")
 local silentaimtext = Instance.new("TextLabel")
 local silentdecor = Instance.new("TextLabel")
 local silentaimtoggle = Instance.new("TextButton")
+local fovtext = Instance.new("TextLabel")
+local showfovtoggle = Instance.new("TextButton")
+local sliderbar = Instance.new("Frame")
+local slider = Instance.new("Frame")
+local fill = Instance.new("Frame")
+local sliderbar1 = Instance.new("Frame")
+local rage = Instance.new("Frame")
+local aimtext = Instance.new("TextLabel")
+local lockdecor = Instance.new("TextLabel")
+local ragetoggle = Instance.new("TextButton")
+local legitlock = Instance.new("Frame")
+local aimtext_2 = Instance.new("TextLabel")
+local lockaimtoggle = Instance.new("TextButton")
+local lockdecor_2 = Instance.new("TextLabel")
 local fovtext_2 = Instance.new("TextLabel")
-local showfovtoggle_2 = Instance.new("TextButton")
 local sliderbar_2 = Instance.new("Frame")
+local slider_2 = Instance.new("Frame")
+local fill_2 = Instance.new("Frame")
+local sliderbar1_2 = Instance.new("Frame")
+local showfovtoggle_2 = Instance.new("TextButton")
+local smoothnesstoggle = Instance.new("TextButton")
+local smoothnesstext = Instance.new("TextLabel")
+local sliderbarfov = Instance.new("Frame")
 local slider_3 = Instance.new("Frame")
 local fill_3 = Instance.new("Frame")
 local sliderbar1_3 = Instance.new("Frame")
+local keybindtext = Instance.new("TextLabel")
+local keybindtoggle = Instance.new("TextButton")
+local aimparttext = Instance.new("TextLabel")
+local aimparttoggle = Instance.new("TextButton")
 local visualsgui = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local esptab = Instance.new("Frame")
@@ -116,7 +125,7 @@ local aimbot = Instance.new("TextButton")
 local visuals = Instance.new("TextButton")
 local player = Instance.new("TextButton")
 local misc = Instance.new("TextButton")
-local lockdecor_2 = Instance.new("TextLabel")
+local lockdecor_3 = Instance.new("TextLabel")
 local DragArea = Instance.new("Frame")
 
 --Properties:
@@ -155,7 +164,6 @@ aimbotgui.BorderSizePixel = 0
 aimbotgui.LayoutOrder = -3
 aimbotgui.Position = UDim2.new(0.0163487736, 0, 0.0671256483, 0)
 aimbotgui.Size = UDim2.new(0, 354, 0, 533)
-aimbotgui.Visible = false
 
 title.Name = "title"
 title.Parent = aimbotgui
@@ -171,56 +179,56 @@ title.TextColor3 = Color3.fromRGB(255, 255, 255)
 title.TextSize = 14.000
 title.TextStrokeTransparency = 0.000
 
-legitlock.Name = "legitlock"
-legitlock.Parent = aimbotgui
-legitlock.BackgroundColor3 = Color3.fromRGB(6, 29, 112)
-legitlock.BorderColor3 = Color3.fromRGB(0, 0, 0)
-legitlock.Position = UDim2.new(0.0169491526, 0, 0.0131332083, 0)
-legitlock.Size = UDim2.new(0, 122, 0, 225)
+silent.Name = "silent"
+silent.Parent = aimbotgui
+silent.BackgroundColor3 = Color3.fromRGB(6, 29, 112)
+silent.BorderColor3 = Color3.fromRGB(0, 0, 0)
+silent.Position = UDim2.new(0.0169491526, 0, 0.470919311, 0)
+silent.Size = UDim2.new(0, 121, 0, 235)
 
-aimtext.Name = "aim text"
-aimtext.Parent = legitlock
-aimtext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-aimtext.BackgroundTransparency = 1.000
-aimtext.BorderColor3 = Color3.fromRGB(0, 0, 0)
-aimtext.Position = UDim2.new(-0.48693046, 0, 0.0484157316, 0)
-aimtext.Size = UDim2.new(0, 181, 0, 46)
-aimtext.Font = Enum.Font.SourceSans
-aimtext.Text = "Lock aim  -"
-aimtext.TextColor3 = Color3.fromRGB(255, 255, 255)
-aimtext.TextSize = 14.000
-aimtext.TextStrokeTransparency = 0.000
+silentaimtext.Name = "silentaim text"
+silentaimtext.Parent = silent
+silentaimtext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+silentaimtext.BackgroundTransparency = 1.000
+silentaimtext.BorderColor3 = Color3.fromRGB(0, 0, 0)
+silentaimtext.Position = UDim2.new(-0.4869304, 0, 0.0484156832, 0)
+silentaimtext.Size = UDim2.new(0, 181, 0, 46)
+silentaimtext.Font = Enum.Font.SourceSans
+silentaimtext.Text = "Silent aim  -"
+silentaimtext.TextColor3 = Color3.fromRGB(255, 255, 255)
+silentaimtext.TextSize = 14.000
+silentaimtext.TextStrokeTransparency = 0.000
 
-lockaimtoggle.Name = "lockaimtoggle"
-lockaimtoggle.Parent = legitlock
-lockaimtoggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-lockaimtoggle.BackgroundTransparency = 1.000
-lockaimtoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
-lockaimtoggle.BorderSizePixel = 0
-lockaimtoggle.Position = UDim2.new(0.475409836, 0, 0.0844444409, 0)
-lockaimtoggle.Size = UDim2.new(0, 46, 0, 30)
-lockaimtoggle.Font = Enum.Font.SourceSans
-lockaimtoggle.Text = "N/A"
-lockaimtoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
-lockaimtoggle.TextSize = 14.000
-lockaimtoggle.TextStrokeTransparency = 0.000
+silentdecor.Name = "silent decor"
+silentdecor.Parent = silent
+silentdecor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+silentdecor.BackgroundTransparency = 1.000
+silentdecor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+silentdecor.BorderSizePixel = 0
+silentdecor.Position = UDim2.new(0.0737704933, 0, 0, 0)
+silentdecor.Size = UDim2.new(0, 104, 0, 19)
+silentdecor.Font = Enum.Font.SourceSans
+silentdecor.Text = "silent (testing)"
+silentdecor.TextColor3 = Color3.fromRGB(255, 255, 255)
+silentdecor.TextSize = 14.000
+silentdecor.TextStrokeTransparency = 0.000
 
-lockdecor.Name = "lock decor"
-lockdecor.Parent = legitlock
-lockdecor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-lockdecor.BackgroundTransparency = 1.000
-lockdecor.BorderColor3 = Color3.fromRGB(0, 0, 0)
-lockdecor.BorderSizePixel = 0
-lockdecor.Position = UDim2.new(0.0737704933, 0, 0, 0)
-lockdecor.Size = UDim2.new(0, 104, 0, 19)
-lockdecor.Font = Enum.Font.SourceSans
-lockdecor.Text = "legit"
-lockdecor.TextColor3 = Color3.fromRGB(255, 255, 255)
-lockdecor.TextSize = 14.000
-lockdecor.TextStrokeTransparency = 0.000
+silentaimtoggle.Name = "silentaimtoggle"
+silentaimtoggle.Parent = silent
+silentaimtoggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+silentaimtoggle.BackgroundTransparency = 1.000
+silentaimtoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+silentaimtoggle.BorderSizePixel = 0
+silentaimtoggle.Position = UDim2.new(0.475409836, 0, 0.0844444409, 0)
+silentaimtoggle.Size = UDim2.new(0, 46, 0, 30)
+silentaimtoggle.Font = Enum.Font.SourceSans
+silentaimtoggle.Text = "N/A"
+silentaimtoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+silentaimtoggle.TextSize = 14.000
+silentaimtoggle.TextStrokeTransparency = 0.000
 
 fovtext.Name = "fov text"
-fovtext.Parent = legitlock
+fovtext.Parent = silent
 fovtext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 fovtext.BackgroundTransparency = 1.000
 fovtext.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -232,8 +240,22 @@ fovtext.TextColor3 = Color3.fromRGB(255, 255, 255)
 fovtext.TextSize = 14.000
 fovtext.TextStrokeTransparency = 0.000
 
+showfovtoggle.Name = "showfovtoggle"
+showfovtoggle.Parent = silent
+showfovtoggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+showfovtoggle.BackgroundTransparency = 1.000
+showfovtoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+showfovtoggle.BorderSizePixel = 0
+showfovtoggle.Position = UDim2.new(0.475409836, 0, 0.191111118, 0)
+showfovtoggle.Size = UDim2.new(0, 46, 0, 30)
+showfovtoggle.Font = Enum.Font.SourceSans
+showfovtoggle.Text = "N/A"
+showfovtoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+showfovtoggle.TextSize = 14.000
+showfovtoggle.TextStrokeTransparency = 0.000
+
 sliderbar.Name = "sliderbar"
-sliderbar.Parent = legitlock
+sliderbar.Parent = silent
 sliderbar.BackgroundColor3 = Color3.fromRGB(139, 139, 139)
 sliderbar.BorderColor3 = Color3.fromRGB(0, 0, 0)
 sliderbar.BorderSizePixel = 0
@@ -265,19 +287,161 @@ sliderbar1.LayoutOrder = 4
 sliderbar1.Position = UDim2.new(1, 0, 0, 0)
 sliderbar1.Size = UDim2.new(0, 15, 0, 10)
 
-showfovtoggle.Name = "showfovtoggle"
-showfovtoggle.Parent = legitlock
-showfovtoggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-showfovtoggle.BackgroundTransparency = 1.000
-showfovtoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
-showfovtoggle.BorderSizePixel = 0
-showfovtoggle.Position = UDim2.new(0.475409836, 0, 0.191111118, 0)
-showfovtoggle.Size = UDim2.new(0, 46, 0, 30)
-showfovtoggle.Font = Enum.Font.SourceSans
-showfovtoggle.Text = "N/A"
-showfovtoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
-showfovtoggle.TextSize = 14.000
-showfovtoggle.TextStrokeTransparency = 0.000
+rage.Name = "rage"
+rage.Parent = aimbotgui
+rage.BackgroundColor3 = Color3.fromRGB(6, 29, 112)
+rage.BorderColor3 = Color3.fromRGB(0, 0, 0)
+rage.Position = UDim2.new(0.576271176, 0, 0.0131332083, 0)
+rage.Size = UDim2.new(0, 122, 0, 90)
+
+aimtext.Name = "aim text"
+aimtext.Parent = rage
+aimtext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+aimtext.BackgroundTransparency = 1.000
+aimtext.BorderColor3 = Color3.fromRGB(0, 0, 0)
+aimtext.Position = UDim2.new(-0.48693046, 0, 0.0484157316, 0)
+aimtext.Size = UDim2.new(0, 181, 0, 46)
+aimtext.Font = Enum.Font.SourceSans
+aimtext.Text = "Lock aim  -"
+aimtext.TextColor3 = Color3.fromRGB(255, 255, 255)
+aimtext.TextSize = 14.000
+aimtext.TextStrokeTransparency = 0.000
+
+lockdecor.Name = "lock decor"
+lockdecor.Parent = rage
+lockdecor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+lockdecor.BackgroundTransparency = 1.000
+lockdecor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+lockdecor.BorderSizePixel = 0
+lockdecor.Position = UDim2.new(0.0737704933, 0, 0, 0)
+lockdecor.Size = UDim2.new(0, 104, 0, 19)
+lockdecor.Font = Enum.Font.SourceSans
+lockdecor.Text = "legit"
+lockdecor.TextColor3 = Color3.fromRGB(255, 255, 255)
+lockdecor.TextSize = 14.000
+lockdecor.TextStrokeTransparency = 0.000
+
+ragetoggle.Name = "ragetoggle"
+ragetoggle.Parent = rage
+ragetoggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ragetoggle.BackgroundTransparency = 1.000
+ragetoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ragetoggle.BorderSizePixel = 0
+ragetoggle.Position = UDim2.new(0.434426218, 0, 0.140000075, 0)
+ragetoggle.Size = UDim2.new(0, 46, 0, 30)
+ragetoggle.Font = Enum.Font.SourceSans
+ragetoggle.Text = "N/A"
+ragetoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+ragetoggle.TextSize = 14.000
+ragetoggle.TextStrokeTransparency = 0.000
+
+legitlock.Name = "legitlock"
+legitlock.Parent = aimbotgui
+legitlock.BackgroundColor3 = Color3.fromRGB(6, 29, 112)
+legitlock.BorderColor3 = Color3.fromRGB(0, 0, 0)
+legitlock.Position = UDim2.new(0.0169491526, 0, 0.0131332083, 0)
+legitlock.Size = UDim2.new(0, 122, 0, 225)
+
+aimtext_2.Name = "aim text"
+aimtext_2.Parent = legitlock
+aimtext_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+aimtext_2.BackgroundTransparency = 1.000
+aimtext_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+aimtext_2.Position = UDim2.new(-0.48693046, 0, 0.0484157316, 0)
+aimtext_2.Size = UDim2.new(0, 181, 0, 46)
+aimtext_2.Font = Enum.Font.SourceSans
+aimtext_2.Text = "Lock aim  -"
+aimtext_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+aimtext_2.TextSize = 14.000
+aimtext_2.TextStrokeTransparency = 0.000
+
+lockaimtoggle.Name = "lockaimtoggle"
+lockaimtoggle.Parent = legitlock
+lockaimtoggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+lockaimtoggle.BackgroundTransparency = 1.000
+lockaimtoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+lockaimtoggle.BorderSizePixel = 0
+lockaimtoggle.Position = UDim2.new(0.475409836, 0, 0.0844444409, 0)
+lockaimtoggle.Size = UDim2.new(0, 46, 0, 30)
+lockaimtoggle.Font = Enum.Font.SourceSans
+lockaimtoggle.Text = "N/A"
+lockaimtoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+lockaimtoggle.TextSize = 14.000
+lockaimtoggle.TextStrokeTransparency = 0.000
+
+lockdecor_2.Name = "lock decor"
+lockdecor_2.Parent = legitlock
+lockdecor_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+lockdecor_2.BackgroundTransparency = 1.000
+lockdecor_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+lockdecor_2.BorderSizePixel = 0
+lockdecor_2.Position = UDim2.new(0.0737704933, 0, 0, 0)
+lockdecor_2.Size = UDim2.new(0, 104, 0, 19)
+lockdecor_2.Font = Enum.Font.SourceSans
+lockdecor_2.Text = "legit"
+lockdecor_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+lockdecor_2.TextSize = 14.000
+lockdecor_2.TextStrokeTransparency = 0.000
+
+fovtext_2.Name = "fov text"
+fovtext_2.Parent = legitlock
+fovtext_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fovtext_2.BackgroundTransparency = 1.000
+fovtext_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+fovtext_2.Position = UDim2.new(-0.48693046, 0, 0.155082405, 0)
+fovtext_2.Size = UDim2.new(0, 181, 0, 46)
+fovtext_2.Font = Enum.Font.SourceSans
+fovtext_2.Text = "Show fov  -"
+fovtext_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+fovtext_2.TextSize = 14.000
+fovtext_2.TextStrokeTransparency = 0.000
+
+sliderbar_2.Name = "sliderbar"
+sliderbar_2.Parent = legitlock
+sliderbar_2.BackgroundColor3 = Color3.fromRGB(139, 139, 139)
+sliderbar_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+sliderbar_2.BorderSizePixel = 0
+sliderbar_2.Position = UDim2.new(0.0737704933, 0, 0.355555564, 0)
+sliderbar_2.Size = UDim2.new(0, 80, 0, 10)
+
+slider_2.Name = "slider"
+slider_2.Parent = sliderbar_2
+slider_2.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+slider_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+slider_2.BorderSizePixel = 0
+slider_2.LayoutOrder = 4
+slider_2.Size = UDim2.new(0, 15, 0, 10)
+slider_2.ZIndex = 2
+
+fill_2.Name = "fill"
+fill_2.Parent = sliderbar_2
+fill_2.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+fill_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+fill_2.BorderSizePixel = 0
+fill_2.Size = UDim2.new(0, 0, 0, -10)
+
+sliderbar1_2.Name = "sliderbar1"
+sliderbar1_2.Parent = sliderbar_2
+sliderbar1_2.BackgroundColor3 = Color3.fromRGB(139, 139, 139)
+sliderbar1_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+sliderbar1_2.BorderSizePixel = 0
+sliderbar1_2.LayoutOrder = 4
+sliderbar1_2.Position = UDim2.new(1, 0, 0, 0)
+sliderbar1_2.Size = UDim2.new(0, 15, 0, 10)
+
+showfovtoggle_2.Name = "showfovtoggle"
+showfovtoggle_2.Parent = legitlock
+showfovtoggle_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+showfovtoggle_2.BackgroundTransparency = 1.000
+showfovtoggle_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+showfovtoggle_2.BorderSizePixel = 0
+showfovtoggle_2.Position = UDim2.new(0.475409836, 0, 0.191111118, 0)
+showfovtoggle_2.Size = UDim2.new(0, 46, 0, 30)
+showfovtoggle_2.Font = Enum.Font.SourceSans
+showfovtoggle_2.Text = "N/A"
+showfovtoggle_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+showfovtoggle_2.TextSize = 14.000
+showfovtoggle_2.TextStrokeTransparency = 0.000
 
 smoothnesstoggle.Name = "smoothnesstoggle"
 smoothnesstoggle.Parent = legitlock
@@ -316,30 +480,30 @@ sliderbarfov.BorderSizePixel = 0
 sliderbarfov.Position = UDim2.new(0.0737704933, 0, 0.595555544, 0)
 sliderbarfov.Size = UDim2.new(0, 80, 0, 10)
 
-slider_2.Name = "slider"
-slider_2.Parent = sliderbarfov
-slider_2.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-slider_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-slider_2.BorderSizePixel = 0
-slider_2.LayoutOrder = 4
-slider_2.Size = UDim2.new(0, 15, 0, 10)
-slider_2.ZIndex = 2
+slider_3.Name = "slider"
+slider_3.Parent = sliderbarfov
+slider_3.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+slider_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+slider_3.BorderSizePixel = 0
+slider_3.LayoutOrder = 4
+slider_3.Size = UDim2.new(0, 15, 0, 10)
+slider_3.ZIndex = 2
 
-fill_2.Name = "fill"
-fill_2.Parent = sliderbarfov
-fill_2.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-fill_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-fill_2.BorderSizePixel = 0
-fill_2.Size = UDim2.new(0, 0, 0, -10)
+fill_3.Name = "fill"
+fill_3.Parent = sliderbarfov
+fill_3.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+fill_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+fill_3.BorderSizePixel = 0
+fill_3.Size = UDim2.new(0, 0, 0, -10)
 
-sliderbar1_2.Name = "sliderbar1"
-sliderbar1_2.Parent = sliderbarfov
-sliderbar1_2.BackgroundColor3 = Color3.fromRGB(139, 139, 139)
-sliderbar1_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-sliderbar1_2.BorderSizePixel = 0
-sliderbar1_2.LayoutOrder = 4
-sliderbar1_2.Position = UDim2.new(1, 0, 0, 0)
-sliderbar1_2.Size = UDim2.new(0, 15, 0, 10)
+sliderbar1_3.Name = "sliderbar1"
+sliderbar1_3.Parent = sliderbarfov
+sliderbar1_3.BackgroundColor3 = Color3.fromRGB(139, 139, 139)
+sliderbar1_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+sliderbar1_3.BorderSizePixel = 0
+sliderbar1_3.LayoutOrder = 4
+sliderbar1_3.Position = UDim2.new(1, 0, 0, 0)
+sliderbar1_3.Size = UDim2.new(0, 15, 0, 10)
 
 keybindtext.Name = "keybind text"
 keybindtext.Parent = legitlock
@@ -394,114 +558,6 @@ aimparttoggle.Text = "N/A"
 aimparttoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
 aimparttoggle.TextSize = 14.000
 aimparttoggle.TextStrokeTransparency = 0.000
-
-silent.Name = "silent"
-silent.Parent = aimbotgui
-silent.BackgroundColor3 = Color3.fromRGB(6, 29, 112)
-silent.BorderColor3 = Color3.fromRGB(0, 0, 0)
-silent.Position = UDim2.new(0.0169491526, 0, 0.470919311, 0)
-silent.Size = UDim2.new(0, 121, 0, 235)
-
-silentaimtext.Name = "silentaim text"
-silentaimtext.Parent = silent
-silentaimtext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-silentaimtext.BackgroundTransparency = 1.000
-silentaimtext.BorderColor3 = Color3.fromRGB(0, 0, 0)
-silentaimtext.Position = UDim2.new(-0.4869304, 0, 0.0484156832, 0)
-silentaimtext.Size = UDim2.new(0, 181, 0, 46)
-silentaimtext.Font = Enum.Font.SourceSans
-silentaimtext.Text = "Silent aim  -"
-silentaimtext.TextColor3 = Color3.fromRGB(255, 255, 255)
-silentaimtext.TextSize = 14.000
-silentaimtext.TextStrokeTransparency = 0.000
-
-silentdecor.Name = "silent decor"
-silentdecor.Parent = silent
-silentdecor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-silentdecor.BackgroundTransparency = 1.000
-silentdecor.BorderColor3 = Color3.fromRGB(0, 0, 0)
-silentdecor.BorderSizePixel = 0
-silentdecor.Position = UDim2.new(0.0737704933, 0, 0, 0)
-silentdecor.Size = UDim2.new(0, 104, 0, 19)
-silentdecor.Font = Enum.Font.SourceSans
-silentdecor.Text = "silent (testing)"
-silentdecor.TextColor3 = Color3.fromRGB(255, 255, 255)
-silentdecor.TextSize = 14.000
-silentdecor.TextStrokeTransparency = 0.000
-
-silentaimtoggle.Name = "silentaimtoggle"
-silentaimtoggle.Parent = silent
-silentaimtoggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-silentaimtoggle.BackgroundTransparency = 1.000
-silentaimtoggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
-silentaimtoggle.BorderSizePixel = 0
-silentaimtoggle.Position = UDim2.new(0.475409836, 0, 0.0844444409, 0)
-silentaimtoggle.Size = UDim2.new(0, 46, 0, 30)
-silentaimtoggle.Font = Enum.Font.SourceSans
-silentaimtoggle.Text = "N/A"
-silentaimtoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
-silentaimtoggle.TextSize = 14.000
-silentaimtoggle.TextStrokeTransparency = 0.000
-
-fovtext_2.Name = "fov text"
-fovtext_2.Parent = silent
-fovtext_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-fovtext_2.BackgroundTransparency = 1.000
-fovtext_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-fovtext_2.Position = UDim2.new(-0.48693046, 0, 0.155082405, 0)
-fovtext_2.Size = UDim2.new(0, 181, 0, 46)
-fovtext_2.Font = Enum.Font.SourceSans
-fovtext_2.Text = "Show fov  -"
-fovtext_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-fovtext_2.TextSize = 14.000
-fovtext_2.TextStrokeTransparency = 0.000
-
-showfovtoggle_2.Name = "showfovtoggle"
-showfovtoggle_2.Parent = silent
-showfovtoggle_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-showfovtoggle_2.BackgroundTransparency = 1.000
-showfovtoggle_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-showfovtoggle_2.BorderSizePixel = 0
-showfovtoggle_2.Position = UDim2.new(0.475409836, 0, 0.191111118, 0)
-showfovtoggle_2.Size = UDim2.new(0, 46, 0, 30)
-showfovtoggle_2.Font = Enum.Font.SourceSans
-showfovtoggle_2.Text = "N/A"
-showfovtoggle_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-showfovtoggle_2.TextSize = 14.000
-showfovtoggle_2.TextStrokeTransparency = 0.000
-
-sliderbar_2.Name = "sliderbar"
-sliderbar_2.Parent = silent
-sliderbar_2.BackgroundColor3 = Color3.fromRGB(139, 139, 139)
-sliderbar_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-sliderbar_2.BorderSizePixel = 0
-sliderbar_2.Position = UDim2.new(0.0737704933, 0, 0.355555564, 0)
-sliderbar_2.Size = UDim2.new(0, 80, 0, 10)
-
-slider_3.Name = "slider"
-slider_3.Parent = sliderbar_2
-slider_3.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-slider_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-slider_3.BorderSizePixel = 0
-slider_3.LayoutOrder = 4
-slider_3.Size = UDim2.new(0, 15, 0, 10)
-slider_3.ZIndex = 2
-
-fill_3.Name = "fill"
-fill_3.Parent = sliderbar_2
-fill_3.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-fill_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-fill_3.BorderSizePixel = 0
-fill_3.Size = UDim2.new(0, 0, 0, -10)
-
-sliderbar1_3.Name = "sliderbar1"
-sliderbar1_3.Parent = sliderbar_2
-sliderbar1_3.BackgroundColor3 = Color3.fromRGB(139, 139, 139)
-sliderbar1_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-sliderbar1_3.BorderSizePixel = 0
-sliderbar1_3.LayoutOrder = 4
-sliderbar1_3.Position = UDim2.new(1, 0, 0, 0)
-sliderbar1_3.Size = UDim2.new(0, 15, 0, 10)
 
 visualsgui.Name = "visualsgui"
 visualsgui.Parent = Frame_3
@@ -974,20 +1030,20 @@ misc.TextColor3 = Color3.fromRGB(255, 255, 255)
 misc.TextSize = 14.000
 misc.TextStrokeTransparency = 0.000
 
-lockdecor_2.Name = "lock decor"
-lockdecor_2.Parent = Frame
-lockdecor_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-lockdecor_2.BackgroundTransparency = 1.000
-lockdecor_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-lockdecor_2.BorderSizePixel = 0
-lockdecor_2.Position = UDim2.new(0.366270453, 0, 0, 0)
-lockdecor_2.Size = UDim2.new(0, 104, 0, 19)
-lockdecor_2.ZIndex = 3
-lockdecor_2.Font = Enum.Font.SourceSans
-lockdecor_2.Text = "zexware"
-lockdecor_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-lockdecor_2.TextSize = 14.000
-lockdecor_2.TextStrokeTransparency = 0.000
+lockdecor_3.Name = "lock decor"
+lockdecor_3.Parent = Frame
+lockdecor_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+lockdecor_3.BackgroundTransparency = 1.000
+lockdecor_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+lockdecor_3.BorderSizePixel = 0
+lockdecor_3.Position = UDim2.new(0.366270453, 0, 0, 0)
+lockdecor_3.Size = UDim2.new(0, 104, 0, 19)
+lockdecor_3.ZIndex = 3
+lockdecor_3.Font = Enum.Font.SourceSans
+lockdecor_3.Text = "zexware"
+lockdecor_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+lockdecor_3.TextSize = 14.000
+lockdecor_3.TextStrokeTransparency = 0.000
 
 DragArea.Name = "DragArea"
 DragArea.Parent = Frame
@@ -998,311 +1054,57 @@ DragArea.Size = UDim2.new(0, 399, 0, 18)
 
 -- Scripts:
 
-local function DXLUR_fake_script() -- legitlock.LocalScript 
-	local script = Instance.new('LocalScript', legitlock)
-
-	local Players = game:GetService("Players")
-	local player = Players.LocalPlayer
-
-	local locktoggle = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.legitlock.lockaimtoggle
-	local fovshow = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.legitlock.showfovtoggle
-	local smoothnesstoggle = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.legitlock.smoothnesstoggle
-
-	locktoggle.Text = "off"
-	fovshow.Text = "off"
-	smoothnesstoggle.Text = "off"
-
-	local clickSound = Instance.new("Sound")
-	clickSound.SoundId = "rbxassetid://125027148509088"
-	clickSound.Volume = 1
-	clickSound.Parent = player.PlayerGui
-
-	local soundReady = false
-
-	clickSound.Loaded:Connect(function()
-		soundReady = true
-	end)
-
-	clickSound:Play()
-	clickSound:Stop()
-
-	local function playClick()
-		if not soundReady then
-			clickSound.Loaded:Wait()
-			soundReady = true
-		end
-
-		clickSound:Stop()
-		clickSound.TimePosition = 0
-		clickSound.PlaybackSpeed = math.random(92, 108) / 100
-		clickSound:Play()
-	end
-
-	locktoggle.MouseButton1Click:Connect(function()
-		playClick()
-		locktoggle.Text = (locktoggle.Text == "off") and "on" or "off"
-	end)
-
-	fovshow.MouseButton1Click:Connect(function()
-		playClick()
-		fovshow.Text = (fovshow.Text == "off") and "on" or "off"
-	end)
-
-	smoothnesstoggle.MouseButton1Click:Connect(function()
-		playClick()
-		smoothnesstoggle.Text = (smoothnesstoggle.Text == "off") and "on" or "off"
-	end)
-
-end
-coroutine.wrap(DXLUR_fake_script)()
-local function CITLS_fake_script() -- sliderbar.LocalScript 
-	local script = Instance.new('LocalScript', sliderbar)
-
-	local player = game.Players.LocalPlayer
-	local slider = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.legitlock.sliderbar.slider
-	local dragging = false
-	local fill = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.legitlock.sliderbar.fill
-	local mouse = player:GetMouse()
-	local sliderBar = script.Parent
-
-	slider.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 then
-			dragging = true
-		end
-	end)
-
-	slider.InputEnded:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 then
-			dragging = false
-		end
-	end)
-
-	game:GetService("UserInputService").InputChanged:Connect(function(input)
-		if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
-			local x = math.clamp(
-				(mouse.X - sliderBar.AbsolutePosition.X) / sliderBar.AbsoluteSize.X,
-				0,
-				1
-			)
-
-			slider.Position = UDim2.new(x, 0, 0, 0)
-			fill.Size = UDim2.new(x, 0, 1, 0)
-		end
-	end)
-
-end
-coroutine.wrap(CITLS_fake_script)()
-local function ROGFGH_fake_script() -- sliderbarfov.LocalScript 
-	local script = Instance.new('LocalScript', sliderbarfov)
-
-	local player = game.Players.LocalPlayer
-	local slider = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.legitlock.sliderbarfov.slider
-	local dragging = false
-	local fill = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.legitlock.sliderbarfov.fill
-	local mouse = player:GetMouse()
-	local sliderBar = script.Parent
-
-	slider.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 then
-			dragging = true
-		end
-	end)
-
-	slider.InputEnded:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 then
-			dragging = false
-		end
-	end)
-
-	game:GetService("UserInputService").InputChanged:Connect(function(input)
-		if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
-			local x = math.clamp(
-				(mouse.X - sliderBar.AbsolutePosition.X) / sliderBar.AbsoluteSize.X,
-				0,
-				1
-			)
-
-			slider.Position = UDim2.new(x, 0, 0, 0)
-			fill.Size = UDim2.new(x, 0, 1, 0)
-		end
-	end)
-
-end
-coroutine.wrap(ROGFGH_fake_script)()
-local function LGVPYBR_fake_script() -- keybindtoggle.LocalScript 
-	local script = Instance.new('LocalScript', keybindtoggle)
-
-	local Players = game:GetService("Players")
-	local UserInputService = game:GetService("UserInputService")
-
-	local player = Players.LocalPlayer
-	local textButton = script.Parent
-
-	local binding = false
-	local inputConnection
-
-	local clickSound = Instance.new("Sound")
-	clickSound.SoundId = "rbxassetid://125027148509088"
-	clickSound.Volume = 1
-	clickSound.Parent = player.PlayerGui
-
-	local soundReady = false
-
-	clickSound.Loaded:Connect(function()
-		soundReady = true
-	end)
-
-	clickSound:Play()
-	clickSound:Stop()
-
-	local function playClick()
-		if not soundReady then
-			clickSound.Loaded:Wait()
-			soundReady = true
-		end
-
-		clickSound:Stop()
-		clickSound.TimePosition = 0
-		clickSound.PlaybackSpeed = math.random(92, 108) / 100
-		clickSound:Play()
-	end
-
-	local function bindKey()
-		if binding then return end
-		binding = true
-
-		playClick()
-		textButton.Text = "Setting"
-
-		inputConnection = UserInputService.InputBegan:Connect(function(input)
-			local keyText = ""
-
-			if input.UserInputType == Enum.UserInputType.Keyboard then
-				keyText = input.KeyCode.Name
-			elseif input.UserInputType == Enum.UserInputType.MouseButton1 then
-				keyText = "MouseButton1"
-			elseif input.UserInputType == Enum.UserInputType.MouseButton2 then
-				keyText = "MouseButton2"
-			elseif input.UserInputType == Enum.UserInputType.MouseButton3 then
-				keyText = "MouseButton3"
-			else
-				keyText = input.UserInputType.Name
-			end
-
-			textButton.Text = keyText
-			playClick()
-
-			if inputConnection then
-				inputConnection:Disconnect()
-				inputConnection = nil
-			end
-
-			binding = false
-		end)
-	end
-
-	textButton.MouseButton1Click:Connect(bindKey)
-
-end
-coroutine.wrap(LGVPYBR_fake_script)()
-local function UZUC_fake_script() -- aimparttoggle.LocalScript 
-	local script = Instance.new('LocalScript', aimparttoggle)
-
-	local Players = game:GetService("Players")
-	local player = Players.LocalPlayer
-
-	local button = script.Parent
-	button.Text = "head"
-
-	local clickSound = Instance.new("Sound")
-	clickSound.SoundId = "rbxassetid://125027148509088"
-	clickSound.Volume = 1
-	clickSound.Parent = player.PlayerGui
-
-	local soundReady = false
-
-	clickSound.Loaded:Connect(function()
-		soundReady = true
-	end)
-
-	clickSound:Play()
-	clickSound:Stop()
-
-	local function playClick()
-		if not soundReady then
-			clickSound.Loaded:Wait()
-			soundReady = true
-		end
-
-		clickSound:Stop()
-		clickSound.TimePosition = 0
-		clickSound.PlaybackSpeed = math.random(92, 108) / 100
-		clickSound:Play()
-	end
-
-	button.MouseButton1Click:Connect(function()
-		playClick()
-
-		if button.Text == "body" then
-			button.Text = "head"
-		else
-			button.Text = "body"
-		end
-	end)
-
-end
-coroutine.wrap(UZUC_fake_script)()
-local function YRPZUHH_fake_script() -- silent.LocalScript 
+local function KRBJQCV_fake_script() -- silent.LocalScript 
 	local script = Instance.new('LocalScript', silent)
 
 	local Players = game:GetService("Players")
 	local player = Players.LocalPlayer
-
+	
 	local silenttoggle = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.silent.silentaimtoggle
 	local fovtoggle = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.silent.showfovtoggle
-
+	
 	silenttoggle.Text = "off"
 	fovtoggle.Text = "off"
-
+	
 	local clickSound = Instance.new("Sound")
 	clickSound.SoundId = "rbxassetid://125027148509088"
 	clickSound.Volume = 1
 	clickSound.Parent = player.PlayerGui
-
+	
 	local soundReady = false
-
+	
 	clickSound.Loaded:Connect(function()
 		soundReady = true
 	end)
-
+	
 	clickSound:Play()
 	clickSound:Stop()
-
+	
 	local function playClick()
 		if not soundReady then
 			clickSound.Loaded:Wait()
 			soundReady = true
 		end
-
+	
 		clickSound:Stop()
 		clickSound.TimePosition = 0
 		clickSound.PlaybackSpeed = math.random(92, 108) / 100
 		clickSound:Play()
 	end
-
+	
 	silenttoggle.MouseButton1Click:Connect(function()
 		playClick()
 		silenttoggle.Text = (silenttoggle.Text == "off") and "on" or "off"
 	end)
-
+	
 	fovtoggle.MouseButton1Click:Connect(function()
 		playClick()
 		fovtoggle.Text = (fovtoggle.Text == "off") and "on" or "off"
 	end)
-
+	
 end
-coroutine.wrap(YRPZUHH_fake_script)()
-local function QIRN_fake_script() -- silentaimtoggle.LocalScript 
+coroutine.wrap(KRBJQCV_fake_script)()
+local function VAZFNF_fake_script() -- silentaimtoggle.LocalScript 
 	local script = Instance.new('LocalScript', silentaimtoggle)
 
 	local Players = game:GetService("Players")
@@ -1310,50 +1112,50 @@ local function QIRN_fake_script() -- silentaimtoggle.LocalScript
 	local RunService = game:GetService("RunService")
 	local GuiService = game:GetService("GuiService")
 	local camera = workspace.CurrentCamera
-
+	
 	local player = Players.LocalPlayer
 	local button = script.Parent
-
+	
 	local silentGui = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.silent
 	local showFOVToggle = silentGui.showfovtoggle
 	local sliderBar = silentGui.sliderbar
 	local slider = sliderBar.slider
-
+	
 	-- FOV SETTINGS
 	local MIN_FOV = 50
 	local MAX_FOV = 400
 	local currentFOV = 200
-
+	
 	-- ===== FOV CIRCLE =====
 	local screenGui = player.PlayerGui.pwrware
-
+	
 	local fovCircle = Instance.new("Frame")
 	fovCircle.AnchorPoint = Vector2.new(0.5, 0.5)
 	fovCircle.BackgroundTransparency = 1
 	fovCircle.Visible = false
 	fovCircle.Parent = screenGui
-
+	
 	local corner = Instance.new("UICorner")
 	corner.CornerRadius = UDim.new(1, 0)
 	corner.Parent = fovCircle
-
+	
 	local stroke = Instance.new("UIStroke")
 	stroke.Thickness = 1
 	stroke.Color = Color3.fromRGB(255, 255, 255)
 	stroke.Parent = fovCircle
-
+	
 	-- ===== UPDATE FOV FROM SLIDER =====
 	local function updateFOV()
 		local alpha = math.clamp(slider.Position.X.Scale, 0, 1)
 		currentFOV = MIN_FOV + (MAX_FOV - MIN_FOV) * alpha
 		fovCircle.Size = UDim2.fromOffset(currentFOV, currentFOV)
 	end
-
+	
 	-- ===== TARGETING =====
 	local function getClosestHead()
 		local mousePos = UIS:GetMouseLocation()
 		local closest, closestDist = nil, math.huge
-
+	
 		for _, plr in ipairs(Players:GetPlayers()) do
 			if plr ~= player and plr.Character then
 				local head = plr.Character:FindFirstChild("Head")
@@ -1369,18 +1171,18 @@ local function QIRN_fake_script() -- silentaimtoggle.LocalScript
 				end
 			end
 		end
-
+	
 		return closest
 	end
-
+	
 	-- ===== VISUAL LOOP =====
 	RunService.RenderStepped:Connect(function()
 		updateFOV()
-
+	
 		if showFOVToggle.Text:lower() == "on" then
 			local mousePos = UIS:GetMouseLocation()
 			local inset = GuiService:GetGuiInset()
-
+	
 			fovCircle.Visible = true
 			fovCircle.Position = UDim2.new(
 				0,
@@ -1392,29 +1194,29 @@ local function QIRN_fake_script() -- silentaimtoggle.LocalScript
 			fovCircle.Visible = false
 		end
 	end)
-
+	
 	-- ===== FLICK AIM =====
 	UIS.InputBegan:Connect(function(input, processed)
 		if processed then return end
 		if input.UserInputType ~= Enum.UserInputType.MouseButton1 then return end
 		if button.Text:lower() ~= "on" then return end
-
+	
 		local target = getClosestHead()
 		if not target then return end
-
+	
 		local originalCFrame = camera.CFrame
-
+	
 		RunService.RenderStepped:Wait()
 		camera.CFrame = CFrame.new(originalCFrame.Position, target.Position)
-
+	
 		RunService.RenderStepped:Wait()
 		camera.CFrame = originalCFrame
 	end)
-
+	
 end
-coroutine.wrap(QIRN_fake_script)()
-local function RDZU_fake_script() -- sliderbar_2.LocalScript 
-	local script = Instance.new('LocalScript', sliderbar_2)
+coroutine.wrap(VAZFNF_fake_script)()
+local function XFCX_fake_script() -- sliderbar.LocalScript 
+	local script = Instance.new('LocalScript', sliderbar)
 
 	local player = game.Players.LocalPlayer
 	local slider = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.silent.sliderbar.slider
@@ -1422,19 +1224,19 @@ local function RDZU_fake_script() -- sliderbar_2.LocalScript
 	local fill = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.silent.sliderbar.fill
 	local mouse = player:GetMouse()
 	local sliderBar = script.Parent
-
+	
 	slider.InputBegan:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 then
 			dragging = true
 		end
 	end)
-
+	
 	slider.InputEnded:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 then
 			dragging = false
 		end
 	end)
-
+	
 	game:GetService("UserInputService").InputChanged:Connect(function(input)
 		if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
 			local x = math.clamp(
@@ -1442,163 +1244,535 @@ local function RDZU_fake_script() -- sliderbar_2.LocalScript
 				0,
 				1
 			)
-
+	
 			slider.Position = UDim2.new(x, 0, 0, 0)
 			fill.Size = UDim2.new(x, 0, 1, 0)
 		end
 	end)
-
+	
 end
-coroutine.wrap(RDZU_fake_script)()
-local function MBTKXMV_fake_script() -- esptab.LocalScript 
-	local script = Instance.new('LocalScript', esptab)
+coroutine.wrap(XFCX_fake_script)()
+local function SHVQQVT_fake_script() -- rage.LocalScript 
+	local script = Instance.new('LocalScript', rage)
 
 	local Players = game:GetService("Players")
 	local player = Players.LocalPlayer
+	
+	local locktoggle = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.rage.ragetoggle
+	
+	locktoggle.Text = "off"
+	
+	locktoggle.MouseButton1Click:Connect(function()
+		if locktoggle.Text == "off" then
+			locktoggle.Text = "on"
+		else
+			if locktoggle.Text == "on" then
+				locktoggle.Text = "off"
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(SHVQQVT_fake_script)()
+local function GONYWN_fake_script() -- ragetoggle.LocalScript 
+	local script = Instance.new('LocalScript', ragetoggle)
 
-	local esptoggle = player.PlayerGui.pwrware.Frame.Frame.Frame.visualsgui.esptab.esptoggle
-	local nametoggle = player.PlayerGui.pwrware.Frame.Frame.Frame.visualsgui.esptab.nametoggle
-	local healthtoggle = player.PlayerGui.pwrware.Frame.Frame.Frame.visualsgui.esptab.healthtoggle
-	local chamstoggle = player.PlayerGui.pwrware.Frame.Frame.Frame.visualsgui.esptab.chamstoggle
+	-- SERVICES
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local VirtualInputManager = game:GetService("VirtualInputManager")
+	local Workspace = game:GetService("Workspace")
+	
+	-- PLAYER
+	local player = Players.LocalPlayer
+	local camera = Workspace.CurrentCamera
+	local mouse = player:GetMouse()
+	
+	-- UI
+	local gui = player.PlayerGui.pwrware.Frame.Frame.Frame
+	local rageToggle = gui.aimbotgui.rage.ragetoggle
+	local fovSlider = gui.aimbotgui.silent.sliderbar.slider
+	local sliderBar = gui.aimbotgui.silent.sliderbar
+	
+	-- SETTINGS
+	local shooting = false
+	
+	-- GET FOV RADIUS (based on slider)
+	local function getFovRadius()
+		return fovSlider.Position.X.Scale * (sliderBar.AbsoluteSize.X * 2)
+	end
+	
+	-- VISIBILITY CHECK
+	local function isVisible(part)
+		local origin = camera.CFrame.Position
+		local direction = (part.Position - origin)
+	
+		local params = RaycastParams.new()
+		params.FilterDescendantsInstances = {player.Character}
+		params.FilterType = Enum.RaycastFilterType.Blacklist
+	
+		local result = Workspace:Raycast(origin, direction, params)
+	
+		return result and result.Instance:IsDescendantOf(part.Parent)
+	end
+	
+	-- MAIN LOOP
+	RunService.RenderStepped:Connect(function()
+		if rageToggle.Text ~= "on" then
+			shooting = false
+			return
+		end
+	
+		local fovRadius = getFovRadius()
+		local screenCenter = Vector2.new(camera.ViewportSize.X / 2, camera.ViewportSize.Y / 2)
+	
+		for _, target in ipairs(Players:GetPlayers()) do
+			if target ~= player and target.Character then
+				local hrp = target.Character:FindFirstChild("HumanoidRootPart")
+				local hum = target.Character:FindFirstChild("Humanoid")
+	
+				if hrp and hum and hum.Health > 0 then
+					local screenPos, onScreen = camera:WorldToViewportPoint(hrp.Position)
+					if onScreen then
+						local dist = (Vector2.new(screenPos.X, screenPos.Y) - screenCenter).Magnitude
+						if dist <= fovRadius and isVisible(hrp) then
+							if not shooting then
+								shooting = true
+								VirtualInputManager:SendMouseButtonEvent(
+									mouse.X,
+									mouse.Y,
+									0,
+									true,
+									game,
+									0
+								)
+							end
+							return
+						end
+					end
+				end
+			end
+		end
+	
+		-- Stop shooting if no valid target
+		if shooting then
+			shooting = false
+			VirtualInputManager:SendMouseButtonEvent(
+				mouse.X,
+				mouse.Y,
+				0,
+				false,
+				game,
+				0
+			)
+		end
+	end)
+	
+end
+coroutine.wrap(GONYWN_fake_script)()
+local function CMPTX_fake_script() -- legitlock.LocalScript 
+	local script = Instance.new('LocalScript', legitlock)
 
-	esptoggle.Text = "off"
-	nametoggle.Text = "off"
-	healthtoggle.Text = "off"
-	chamstoggle.Text = "off"
-
-	-- === CLICK SOUND ===
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	
+	local locktoggle = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.legitlock.lockaimtoggle
+	local fovshow = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.legitlock.showfovtoggle
+	local smoothnesstoggle = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.legitlock.smoothnesstoggle
+	
+	locktoggle.Text = "off"
+	fovshow.Text = "off"
+	smoothnesstoggle.Text = "off"
+	
 	local clickSound = Instance.new("Sound")
 	clickSound.SoundId = "rbxassetid://125027148509088"
 	clickSound.Volume = 1
 	clickSound.Parent = player.PlayerGui
-
+	
 	local soundReady = false
+	
 	clickSound.Loaded:Connect(function()
 		soundReady = true
 	end)
-
-	-- warm up decoder
+	
 	clickSound:Play()
 	clickSound:Stop()
-
+	
 	local function playClick()
 		if not soundReady then
 			clickSound.Loaded:Wait()
 			soundReady = true
 		end
+	
+		clickSound:Stop()
+		clickSound.TimePosition = 0
+		clickSound.PlaybackSpeed = math.random(92, 108) / 100
+		clickSound:Play()
+	end
+	
+	locktoggle.MouseButton1Click:Connect(function()
+		playClick()
+		locktoggle.Text = (locktoggle.Text == "off") and "on" or "off"
+	end)
+	
+	fovshow.MouseButton1Click:Connect(function()
+		playClick()
+		fovshow.Text = (fovshow.Text == "off") and "on" or "off"
+	end)
+	
+	smoothnesstoggle.MouseButton1Click:Connect(function()
+		playClick()
+		smoothnesstoggle.Text = (smoothnesstoggle.Text == "off") and "on" or "off"
+	end)
+	
+end
+coroutine.wrap(CMPTX_fake_script)()
+local function CGVY_fake_script() -- sliderbar_2.LocalScript 
+	local script = Instance.new('LocalScript', sliderbar_2)
 
+	local player = game.Players.LocalPlayer
+	local slider = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.legitlock.sliderbar.slider
+	local dragging = false
+	local fill = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.legitlock.sliderbar.fill
+	local mouse = player:GetMouse()
+	local sliderBar = script.Parent
+	
+	slider.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+		end
+	end)
+	
+	slider.InputEnded:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = false
+		end
+	end)
+	
+	game:GetService("UserInputService").InputChanged:Connect(function(input)
+		if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+			local x = math.clamp(
+				(mouse.X - sliderBar.AbsolutePosition.X) / sliderBar.AbsoluteSize.X,
+				0,
+				1
+			)
+	
+			slider.Position = UDim2.new(x, 0, 0, 0)
+			fill.Size = UDim2.new(x, 0, 1, 0)
+		end
+	end)
+	
+end
+coroutine.wrap(CGVY_fake_script)()
+local function QNRWTTN_fake_script() -- sliderbarfov.LocalScript 
+	local script = Instance.new('LocalScript', sliderbarfov)
+
+	local player = game.Players.LocalPlayer
+	local slider = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.legitlock.sliderbarfov.slider
+	local dragging = false
+	local fill = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui.legitlock.sliderbarfov.fill
+	local mouse = player:GetMouse()
+	local sliderBar = script.Parent
+	
+	slider.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+		end
+	end)
+	
+	slider.InputEnded:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = false
+		end
+	end)
+	
+	game:GetService("UserInputService").InputChanged:Connect(function(input)
+		if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+			local x = math.clamp(
+				(mouse.X - sliderBar.AbsolutePosition.X) / sliderBar.AbsoluteSize.X,
+				0,
+				1
+			)
+	
+			slider.Position = UDim2.new(x, 0, 0, 0)
+			fill.Size = UDim2.new(x, 0, 1, 0)
+		end
+	end)
+	
+end
+coroutine.wrap(QNRWTTN_fake_script)()
+local function RHVFAU_fake_script() -- keybindtoggle.LocalScript 
+	local script = Instance.new('LocalScript', keybindtoggle)
+
+	local Players = game:GetService("Players")
+	local UserInputService = game:GetService("UserInputService")
+	
+	local player = Players.LocalPlayer
+	local textButton = script.Parent
+	
+	local binding = false
+	local inputConnection
+	
+	local clickSound = Instance.new("Sound")
+	clickSound.SoundId = "rbxassetid://125027148509088"
+	clickSound.Volume = 1
+	clickSound.Parent = player.PlayerGui
+	
+	local soundReady = false
+	
+	clickSound.Loaded:Connect(function()
+		soundReady = true
+	end)
+	
+	clickSound:Play()
+	clickSound:Stop()
+	
+	local function playClick()
+		if not soundReady then
+			clickSound.Loaded:Wait()
+			soundReady = true
+		end
+	
+		clickSound:Stop()
+		clickSound.TimePosition = 0
+		clickSound.PlaybackSpeed = math.random(92, 108) / 100
+		clickSound:Play()
+	end
+	
+	local function bindKey()
+		if binding then return end
+		binding = true
+	
+		playClick()
+		textButton.Text = "Setting"
+	
+		inputConnection = UserInputService.InputBegan:Connect(function(input)
+			local keyText = ""
+	
+			if input.UserInputType == Enum.UserInputType.Keyboard then
+				keyText = input.KeyCode.Name
+			elseif input.UserInputType == Enum.UserInputType.MouseButton1 then
+				keyText = "MouseButton1"
+			elseif input.UserInputType == Enum.UserInputType.MouseButton2 then
+				keyText = "MouseButton2"
+			elseif input.UserInputType == Enum.UserInputType.MouseButton3 then
+				keyText = "MouseButton3"
+			else
+				keyText = input.UserInputType.Name
+			end
+	
+			textButton.Text = keyText
+			playClick()
+	
+			if inputConnection then
+				inputConnection:Disconnect()
+				inputConnection = nil
+			end
+	
+			binding = false
+		end)
+	end
+	
+	textButton.MouseButton1Click:Connect(bindKey)
+	
+end
+coroutine.wrap(RHVFAU_fake_script)()
+local function XHZC_fake_script() -- aimparttoggle.LocalScript 
+	local script = Instance.new('LocalScript', aimparttoggle)
+
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	
+	local button = script.Parent
+	button.Text = "head"
+	
+	local clickSound = Instance.new("Sound")
+	clickSound.SoundId = "rbxassetid://125027148509088"
+	clickSound.Volume = 1
+	clickSound.Parent = player.PlayerGui
+	
+	local soundReady = false
+	
+	clickSound.Loaded:Connect(function()
+		soundReady = true
+	end)
+	
+	clickSound:Play()
+	clickSound:Stop()
+	
+	local function playClick()
+		if not soundReady then
+			clickSound.Loaded:Wait()
+			soundReady = true
+		end
+	
+		clickSound:Stop()
+		clickSound.TimePosition = 0
+		clickSound.PlaybackSpeed = math.random(92, 108) / 100
+		clickSound:Play()
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		playClick()
+	
+		if button.Text == "body" then
+			button.Text = "head"
+		else
+			button.Text = "body"
+		end
+	end)
+	
+end
+coroutine.wrap(XHZC_fake_script)()
+local function SKQVGNY_fake_script() -- esptab.LocalScript 
+	local script = Instance.new('LocalScript', esptab)
+
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	
+	local esptoggle = player.PlayerGui.pwrware.Frame.Frame.Frame.visualsgui.esptab.esptoggle
+	local nametoggle = player.PlayerGui.pwrware.Frame.Frame.Frame.visualsgui.esptab.nametoggle
+	local healthtoggle = player.PlayerGui.pwrware.Frame.Frame.Frame.visualsgui.esptab.healthtoggle
+	local chamstoggle = player.PlayerGui.pwrware.Frame.Frame.Frame.visualsgui.esptab.chamstoggle
+	
+	esptoggle.Text = "off"
+	nametoggle.Text = "off"
+	healthtoggle.Text = "off"
+	chamstoggle.Text = "off"
+	
+	-- === CLICK SOUND ===
+	local clickSound = Instance.new("Sound")
+	clickSound.SoundId = "rbxassetid://125027148509088"
+	clickSound.Volume = 1
+	clickSound.Parent = player.PlayerGui
+	
+	local soundReady = false
+	clickSound.Loaded:Connect(function()
+		soundReady = true
+	end)
+	
+	-- warm up decoder
+	clickSound:Play()
+	clickSound:Stop()
+	
+	local function playClick()
+		if not soundReady then
+			clickSound.Loaded:Wait()
+			soundReady = true
+		end
+	
 		clickSound:Stop()
 		clickSound.TimePosition = 0
 		clickSound.PlaybackSpeed = math.random(92,108) / 100
 		clickSound:Play()
 	end
-
+	
 	-- === TOGGLES ===
 	esptoggle.MouseButton1Click:Connect(function()
 		playClick()
 		esptoggle.Text = (esptoggle.Text == "off") and "on" or "off"
 	end)
-
+	
 	nametoggle.MouseButton1Click:Connect(function()
 		playClick()
 		nametoggle.Text = (nametoggle.Text == "off") and "on" or "off"
 	end)
-
+	
 	healthtoggle.MouseButton1Click:Connect(function()
 		playClick()
 		healthtoggle.Text = (healthtoggle.Text == "off") and "on" or "off"
 	end)
-
+	
 	chamstoggle.MouseButton1Click:Connect(function()
 		playClick()
 		chamstoggle.Text = (chamstoggle.Text == "off") and "on" or "off"
 	end)
-
+	
 end
-coroutine.wrap(MBTKXMV_fake_script)()
-local function FMUJV_fake_script() -- playermods.LocalScript 
+coroutine.wrap(SKQVGNY_fake_script)()
+local function YBEDJ_fake_script() -- playermods.LocalScript 
 	local script = Instance.new('LocalScript', playermods)
 
 	local Players = game:GetService("Players")
 	local player = Players.LocalPlayer
-
+	
 	local silenttoggle = player.PlayerGui.pwrware.Frame.Frame.Frame.playergui.playermods.wallbangtoggle
 	local walkspeedtoggle = player.PlayerGui.pwrware.Frame.Frame.Frame.playergui.playermods.walkspeedtoggle
-
+	
 	silenttoggle.Text = "off"
 	walkspeedtoggle.Text = "off"
-
+	
 	-- === CLICK SOUND ===
 	local clickSound = Instance.new("Sound")
 	clickSound.SoundId = "rbxassetid://125027148509088"
 	clickSound.Volume = 1
 	clickSound.Parent = player.PlayerGui
-
+	
 	local soundReady = false
 	clickSound.Loaded:Connect(function()
 		soundReady = true
 	end)
-
+	
 	-- warm up decoder
 	clickSound:Play()
 	clickSound:Stop()
-
+	
 	local function playClick()
 		if not soundReady then
 			clickSound.Loaded:Wait()
 			soundReady = true
 		end
-
+	
 		clickSound:Stop()
 		clickSound.TimePosition = 0
 		clickSound.PlaybackSpeed = math.random(92,108) / 100
 		clickSound:Play()
 	end
-
+	
 	-- === TOGGLES ===
 	silenttoggle.MouseButton1Click:Connect(function()
 		playClick()
 		silenttoggle.Text = (silenttoggle.Text == "off") and "on" or "off"
 	end)
-
+	
 	walkspeedtoggle.MouseButton1Click:Connect(function()
 		playClick()
 		walkspeedtoggle.Text = (walkspeedtoggle.Text == "off") and "on" or "off"
 	end)
-
+	
 end
-coroutine.wrap(FMUJV_fake_script)()
-local function GYSH_fake_script() -- wallbangtoggle.LocalScript 
+coroutine.wrap(YBEDJ_fake_script)()
+local function NQXCA_fake_script() -- wallbangtoggle.LocalScript 
 	local script = Instance.new('LocalScript', wallbangtoggle)
 
 	-- LocalScript INSIDE THE TOOL
-
+	
 	local Players = game:GetService("Players")
 	local RunService = game:GetService("RunService")
-
+	
 	local player = Players.LocalPlayer
 	local camera = workspace.CurrentCamera
 	local mouse = player:GetMouse()
-
+	
 	local OFFSET_BEHIND = -3
 	local RETURN_DELAY = 0.1
-
+	
 	local function getClosestPlayerToMouse()
 		local closest, closestDist = nil, math.huge
-
+	
 		for _, plr in ipairs(Players:GetPlayers()) do
 			if plr ~= player
 				and plr.Character
 				and plr.Character:FindFirstChild("HumanoidRootPart") then
-
+	
 				local pos, onScreen = camera:WorldToViewportPoint(
 					plr.Character.HumanoidRootPart.Position
 				)
-
+	
 				if onScreen then
 					local dist = (Vector2.new(pos.X, pos.Y)
 						- Vector2.new(mouse.X, mouse.Y)).Magnitude
-
+	
 					if dist < closestDist then
 						closestDist = dist
 						closest = plr
@@ -1606,10 +1780,10 @@ local function GYSH_fake_script() -- wallbangtoggle.LocalScript
 				end
 			end
 		end
-
+	
 		return closest
 	end
-
+	
 	script.Parent.Activated:Connect(function()
 		-- Toggle check
 		local toggle = player.PlayerGui:FindFirstChild("YourGuiNameHere", true)
@@ -1619,29 +1793,29 @@ local function GYSH_fake_script() -- wallbangtoggle.LocalScript
 				return
 			end
 		end
-
+	
 		local char = player.Character
 		if not char then return end
-
+	
 		local hrp = char:FindFirstChild("HumanoidRootPart")
 		if not hrp then return end
-
+	
 		local target = getClosestPlayerToMouse()
 		if not target or not target.Character then return end
-
+	
 		local targetHRP = target.Character:FindFirstChild("HumanoidRootPart")
 		if not targetHRP then return end
-
+	
 		local original = hrp.CFrame
-
+	
 		-- TELEPORT
 		hrp.CFrame = targetHRP.CFrame * CFrame.new(0, 0, OFFSET_BEHIND)
-
+	
 		-- Ensure teleport applies BEFORE shot
 		RunService.Heartbeat:Wait()
-
+	
 		-- Tool fires automatically (this is Activated)
-
+	
 		-- TELEPORT BACK
 		task.delay(RETURN_DELAY, function()
 			if hrp then
@@ -1649,10 +1823,10 @@ local function GYSH_fake_script() -- wallbangtoggle.LocalScript
 			end
 		end)
 	end)
-
+	
 end
-coroutine.wrap(GYSH_fake_script)()
-local function PXALCIB_fake_script() -- walkspeedsliderbar.LocalScript 
+coroutine.wrap(NQXCA_fake_script)()
+local function AVYQGR_fake_script() -- walkspeedsliderbar.LocalScript 
 	local script = Instance.new('LocalScript', walkspeedsliderbar)
 
 	local player = game.Players.LocalPlayer
@@ -1661,19 +1835,19 @@ local function PXALCIB_fake_script() -- walkspeedsliderbar.LocalScript
 	local fill = player.PlayerGui.pwrware.Frame.Frame.Frame.playergui.playermods["walkspeed-sliderbar"].fill
 	local mouse = player:GetMouse()
 	local sliderBar = script.Parent
-
+	
 	slider.InputBegan:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 then
 			dragging = true
 		end
 	end)
-
+	
 	slider.InputEnded:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 then
 			dragging = false
 		end
 	end)
-
+	
 	game:GetService("UserInputService").InputChanged:Connect(function(input)
 		if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
 			local x = math.clamp(
@@ -1681,55 +1855,55 @@ local function PXALCIB_fake_script() -- walkspeedsliderbar.LocalScript
 				0,
 				1
 			)
-
+	
 			slider.Position = UDim2.new(x, 0, 0, 0)
 			fill.Size = UDim2.new(x, 0, 1, 0)
 		end
 	end)
-
+	
 end
-coroutine.wrap(PXALCIB_fake_script)()
-local function QQRQUS_fake_script() -- walkspeedtoggle.LocalScript 
+coroutine.wrap(AVYQGR_fake_script)()
+local function VSDFUMW_fake_script() -- walkspeedtoggle.LocalScript 
 	local script = Instance.new('LocalScript', walkspeedtoggle)
 
 	local Players = game:GetService("Players")
 	local RunService = game:GetService("RunService")
-
+	
 	local player = Players.LocalPlayer
 	local button = script.Parent
-
+	
 	-- UI references
 	local gui = player.PlayerGui.pwrware.Frame.Frame.Frame.playergui.playermods
 	local sliderBar = gui["walkspeed-sliderbar"]
 	local slider = sliderBar.slider
-
+	
 	-- SETTINGS
 	local DEFAULT_SPEED = 16
 	local MIN_SPEED = 16
 	local MAX_SPEED = 160
-
+	
 	local function getHumanoid()
 		local char = player.Character
 		if not char then return nil end
 		return char:FindFirstChildOfClass("Humanoid")
 	end
-
+	
 	local function setDefaultSpeed()
 		local humanoid = getHumanoid()
 		if humanoid then
 			humanoid.WalkSpeed = DEFAULT_SPEED
 		end
 	end
-
+	
 	local function applySpeedFromSlider()
 		local humanoid = getHumanoid()
 		if not humanoid then return end
-
+	
 		local x = slider.Position.X.Scale
 		local speed = MIN_SPEED + (MAX_SPEED - MIN_SPEED) * x
 		humanoid.WalkSpeed = speed
 	end
-
+	
 	-- When toggle is clicked
 	button.MouseButton1Click:Connect(function()
 		if button.Text:lower() == "on" then
@@ -1740,14 +1914,14 @@ local function QQRQUS_fake_script() -- walkspeedtoggle.LocalScript
 			setDefaultSpeed()
 		end
 	end)
-
+	
 	-- While enabled, keep updating speed smoothly
 	RunService.RenderStepped:Connect(function()
 		if button.Text:lower() == "on" then
 			applySpeedFromSlider()
 		end
 	end)
-
+	
 	-- On respawn
 	player.CharacterAdded:Connect(function()
 		task.wait(0.2)
@@ -1757,100 +1931,100 @@ local function QQRQUS_fake_script() -- walkspeedtoggle.LocalScript
 			setDefaultSpeed()
 		end
 	end)
-
+	
 end
-coroutine.wrap(QQRQUS_fake_script)()
-local function LGYISG_fake_script() -- keybindtoggle_2.LocalScript 
+coroutine.wrap(VSDFUMW_fake_script)()
+local function QHZWQSH_fake_script() -- keybindtoggle_2.LocalScript 
 	local script = Instance.new('LocalScript', keybindtoggle_2)
 
 	local Players = game:GetService("Players")
 	local UserInputService = game:GetService("UserInputService")
 	local SoundService = game:GetService("SoundService")
-
+	
 	local player = Players.LocalPlayer
 	local textButton = script.Parent
-
+	
 	local boundInputType
 	local boundKey
 	local isVisible = true
-
+	
 	-- === CLICK SOUND (FIXED) ===
 	local clickSound = Instance.new("Sound")
 	clickSound.SoundId = "rbxassetid://125027148509088"
 	clickSound.Volume = 1
 	clickSound.Parent = SoundService -- 🔥 IMPORTANT FIX
-
+	
 	local soundReady = false
 	clickSound.Loaded:Connect(function()
 		soundReady = true
 	end)
-
+	
 	-- warm-up decode
 	clickSound:Play()
 	clickSound:Stop()
-
+	
 	local function playClick()
 		if not soundReady then
 			clickSound.Loaded:Wait()
 			soundReady = true
 		end
-
+	
 		clickSound:Stop()
 		clickSound.TimePosition = 0
 		clickSound.PlaybackSpeed = math.random(92,108) / 100
 		clickSound:Play()
 	end
-
+	
 	-- === BIND KEY ===
 	local function bindKey()
 		playClick()
 		textButton.Text = "Setting"
-
+	
 		local inputConnection
 		inputConnection = UserInputService.InputBegan:Connect(function(input, gameProcessed)
 			if gameProcessed then return end
-
+	
 			if input.UserInputType == Enum.UserInputType.Keyboard then
 				boundInputType = Enum.UserInputType.Keyboard
 				boundKey = input.KeyCode.Name
 				textButton.Text = boundKey
-
+	
 			elseif input.UserInputType == Enum.UserInputType.MouseButton1 then
 				boundInputType = Enum.UserInputType.MouseButton1
 				boundKey = "MouseButton1"
 				textButton.Text = boundKey
-
+	
 			elseif input.UserInputType == Enum.UserInputType.MouseButton2 then
 				boundInputType = Enum.UserInputType.MouseButton2
 				boundKey = "MouseButton2"
 				textButton.Text = boundKey
-
+	
 			elseif input.UserInputType == Enum.UserInputType.MouseButton3 then
 				boundInputType = Enum.UserInputType.MouseButton3
 				boundKey = "MouseButton3"
 				textButton.Text = boundKey
 			end
-
+	
 			playClick()
 			inputConnection:Disconnect()
 		end)
 	end
-
+	
 	textButton.MouseButton1Click:Connect(bindKey)
-
+	
 	-- === LISTEN FOR BOUND KEY ===
 	UserInputService.InputBegan:Connect(function(input, gameProcessed)
 		if gameProcessed then return end
 		if not boundInputType then return end
-
+	
 		local triggered = false
-
+	
 		if boundInputType == Enum.UserInputType.Keyboard then
 			triggered = input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode.Name == boundKey
 		else
 			triggered = input.UserInputType == boundInputType
 		end
-
+	
 		if triggered then
 			local pwrware = player.PlayerGui:FindFirstChild("pwrware")
 			if pwrware then
@@ -1860,61 +2034,61 @@ local function LGYISG_fake_script() -- keybindtoggle_2.LocalScript
 			end
 		end
 	end)
-
+	
 end
-coroutine.wrap(LGYISG_fake_script)()
-local function PHHINQP_fake_script() -- Frame_3.LocalScript 
+coroutine.wrap(QHZWQSH_fake_script)()
+local function ZUXE_fake_script() -- Frame_3.LocalScript 
 	local script = Instance.new('LocalScript', Frame_3)
 
 	local Players = game:GetService("Players")
 	local player = Players.LocalPlayer
-
+	
 	local aimbotgui = player.PlayerGui.pwrware.Frame.Frame.Frame.aimbotgui
 	local visualsgui = player.PlayerGui.pwrware.Frame.Frame.Frame.visualsgui
 	local playergui = player.PlayerGui.pwrware.Frame.Frame.Frame.playergui
 	local miscgui = player.PlayerGui.pwrware.Frame.Frame.Frame.miscgui
-
+	
 	local aimbotbutton = player.PlayerGui.pwrware.Frame.Frame.aimbot
 	local visualsbutton = player.PlayerGui.pwrware.Frame.Frame.visuals
 	local miscbutton = player.PlayerGui.pwrware.Frame.Frame.misc
 	local playerbutton = player.PlayerGui.pwrware.Frame.Frame.player
-
+	
 	local logo1 = player.PlayerGui.pwrware.Frame.Frame.Frame.logo1
 	local logo2 = player.PlayerGui.pwrware.Frame.Frame.Frame.logo2
 	local logo3 = player.PlayerGui.pwrware.Frame.Frame.Frame.logo3
 	local logo4 = player.PlayerGui.pwrware.Frame.Frame.Frame.logo4
-
+	
 	logo1.Visible = true
 	logo2.Visible = true
 	logo3.Visible = true
 	logo4.Visible = true
-
+	
 	-- === CLICK SOUND ===
 	local clickSound = Instance.new("Sound")
 	clickSound.SoundId = "rbxassetid://125027148509088"
 	clickSound.Volume = 1
 	clickSound.Parent = player.PlayerGui
-
+	
 	local soundReady = false
 	clickSound.Loaded:Connect(function()
 		soundReady = true
 	end)
-
+	
 	clickSound:Play()
 	clickSound:Stop()
-
+	
 	local function playClick()
 		if not soundReady then
 			clickSound.Loaded:Wait()
 			soundReady = true
 		end
-
+	
 		clickSound:Stop()
 		clickSound.TimePosition = 0
 		clickSound.PlaybackSpeed = math.random(92, 108) / 100
 		clickSound:Play()
 	end
-
+	
 	-- === UI LOGIC ===
 	local function hideall()
 		aimbotgui.Visible = false
@@ -1926,34 +2100,34 @@ local function PHHINQP_fake_script() -- Frame_3.LocalScript
 		logo3.Visible = false
 		logo4.Visible = false
 	end
-
+	
 	aimbotbutton.MouseButton1Click:Connect(function()
 		playClick()
 		hideall()
 		aimbotgui.Visible = true
 	end)
-
+	
 	visualsbutton.MouseButton1Click:Connect(function()
 		playClick()
 		hideall()
 		visualsgui.Visible = true
 	end)
-
+	
 	playerbutton.MouseButton1Click:Connect(function()
 		playClick()
 		hideall()
 		playergui.Visible = true
 	end)
-
+	
 	miscbutton.MouseButton1Click:Connect(function()
 		playClick()
 		hideall()
 		miscgui.Visible = true
 	end)
-
+	
 end
-coroutine.wrap(PHHINQP_fake_script)()
-local function YCBRB_fake_script() -- Frame.LocalScript 
+coroutine.wrap(ZUXE_fake_script)()
+local function DOKZGMG_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local gui = script.Parent -- The frame to drag
@@ -1961,11 +2135,11 @@ local function YCBRB_fake_script() -- Frame.LocalScript
 	local dragInput
 	local dragStart
 	local startPos
-
+	
 	-- Optional: create a specific area inside the frame to drag
 	-- If you want the whole frame draggable, just use gui itself
 	local dragHandle = gui:WaitForChild("DragArea") -- e.g., a small Frame or TextLabel at the top
-
+	
 	-- Update position
 	local function update(input)
 		local delta = input.Position - dragStart
@@ -1976,14 +2150,14 @@ local function YCBRB_fake_script() -- Frame.LocalScript
 			startPos.Y.Offset + delta.Y
 		)
 	end
-
+	
 	-- Start dragging
 	dragHandle.InputBegan:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 then
 			dragging = true
 			dragStart = input.Position
 			startPos = gui.Position
-
+	
 			-- Stop dragging
 			input.Changed:Connect(function()
 				if input.UserInputState == Enum.UserInputState.End then
@@ -1992,24 +2166,24 @@ local function YCBRB_fake_script() -- Frame.LocalScript
 			end)
 		end
 	end)
-
+	
 	-- Track mouse movement over the handle
 	dragHandle.InputChanged:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseMovement then
 			dragInput = input
 		end
 	end)
-
+	
 	-- Move the frame
 	game:GetService("UserInputService").InputChanged:Connect(function(input)
 		if input == dragInput and dragging then
 			update(input)
 		end
 	end)
-
+	
 end
-coroutine.wrap(YCBRB_fake_script)()
-local function NSXRX_fake_script() -- Frame.fovenable 
+coroutine.wrap(DOKZGMG_fake_script)()
+local function MBLR_fake_script() -- Frame.fovenable 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Players = game:GetService("Players")
@@ -2018,40 +2192,40 @@ local function NSXRX_fake_script() -- Frame.fovenable
 	local GuiService = game:GetService("GuiService")
 	local camera = workspace.CurrentCamera
 	local localPlayer = Players.LocalPlayer
-
+	
 	local gui = script.Parent
 	local screenGui = gui.Parent
-
+	
 	-- ===== UI REFERENCES =====
 	local legitlock = gui:WaitForChild("Frame"):WaitForChild("Frame"):WaitForChild("aimbotgui"):WaitForChild("legitlock")
 	local showFOVToggle = legitlock:WaitForChild("showfovtoggle")
 	local sliderbar = legitlock:WaitForChild("sliderbar")
 	local sliderBarKnob = sliderbar:WaitForChild("slider")
-
+	
 	local lockAimToggle = legitlock:WaitForChild("lockaimtoggle")
 	local smoothnessToggle = legitlock:WaitForChild("smoothnesstoggle")
 	local keybindtoggle = legitlock:WaitForChild("keybindtoggle")
 	local aimparttoggle = legitlock:WaitForChild("aimparttoggle")
-
+	
 	local sliderbarfov = legitlock:WaitForChild("sliderbarfov")
 	local sliderFOVKnob = sliderbarfov:WaitForChild("slider")
 	-- ===== VARIABLES =====
 	local draggingFOV = false
 	local draggingSmooth = false
-
+	
 	-- FOV Size
 	local minFOV = 50
 	local maxFOV = 400
 	local currentFOVSize = 200
-
+	
 	-- Smoothness
 	local minSmooth = 0.01
 	local maxSmooth = 0.30
 	local currentSmooth = 0.15
-
+	
 	-- Key / Mouse hold tracking
 	local holdKey = false
-
+	
 	-- ===== CREATE FOV CIRCLE =====
 	local fovCircle = Instance.new("Frame")
 	fovCircle.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -2059,80 +2233,80 @@ local function NSXRX_fake_script() -- Frame.fovenable
 	fovCircle.BackgroundTransparency = 1
 	fovCircle.Visible = false
 	fovCircle.Parent = screenGui
-
+	
 	local corner = Instance.new("UICorner")
 	corner.CornerRadius = UDim.new(1, 0)
 	corner.Parent = fovCircle
-
+	
 	local stroke = Instance.new("UIStroke")
 	stroke.Thickness = 1
 	stroke.Color = Color3.fromRGB(255, 255, 255)
 	stroke.Parent = fovCircle
-
+	
 	-- ===== FOV SIZE SLIDER =====
 	sliderBarKnob.InputBegan:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 then
 			draggingFOV = true
 		end
 	end)
-
+	
 	UIS.InputEnded:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 then
 			draggingFOV = false
 		end
 	end)
-
+	
 	UIS.InputChanged:Connect(function(input)
 		if draggingFOV and input.UserInputType == Enum.UserInputType.MouseMovement then
 			local mouseX = input.Position.X
 			local barX = sliderbar.AbsolutePosition.X
 			local barW = sliderbar.AbsoluteSize.X
-
+	
 			local alpha = math.clamp((mouseX - barX) / barW, 0, 1)
 			sliderBarKnob.Position = UDim2.new(alpha, 0, 0.5, 0)
-
+	
 			currentFOVSize = minFOV + (maxFOV - minFOV) * alpha
 			fovCircle.Size = UDim2.fromOffset(currentFOVSize, currentFOVSize)
 		end
 	end)
-
+	
 	-- ===== SMOOTHNESS SLIDER =====
 	sliderFOVKnob.InputBegan:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 then
 			draggingSmooth = true
 		end
 	end)
-
+	
 	UIS.InputEnded:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 then
 			draggingSmooth = false
 		end
 	end)
-
+	
 	UIS.InputChanged:Connect(function(input)
 		if draggingSmooth and input.UserInputType == Enum.UserInputType.MouseMovement then
 			local mouseX = input.Position.X
 			local barX = sliderbarfov.AbsolutePosition.X
 			local barW = sliderbarfov.AbsoluteSize.X
-
+	
 			local alpha = math.clamp((mouseX - barX) / barW, 0, 1)
 			sliderFOVKnob.Position = UDim2.new(alpha, 0, 0.5, 0)
-
+	
 			currentSmooth = minSmooth + (maxSmooth - minSmooth) * (1 - alpha)
 		end
 	end)
-
+	
 	-- ===== KEY & MOUSE DETECTION =====
 	UIS.InputBegan:Connect(function(input, processed)
 		if processed then return end
-
+	
 		local bindText = keybindtoggle.Text:lower()
-
+	
 		if bindText == "n/a" or bindText == "setting" then
 			holdKey = false
 			return
 		end
-
+	
 		-- Mouse buttons
 		if bindText == "mousebutton1" and input.UserInputType == Enum.UserInputType.MouseButton1 then
 			holdKey = true
@@ -2140,7 +2314,7 @@ local function NSXRX_fake_script() -- Frame.fovenable
 			holdKey = true
 		elseif bindText == "mousebutton3" and input.UserInputType == Enum.UserInputType.MouseButton3 then
 			holdKey = true
-
+	
 			-- Keyboard
 		elseif input.UserInputType == Enum.UserInputType.Keyboard then
 			if input.KeyCode.Name:lower() == bindText then
@@ -2148,48 +2322,48 @@ local function NSXRX_fake_script() -- Frame.fovenable
 			end
 		end
 	end)
-
+	
 	UIS.InputEnded:Connect(function(input)
 		local bindText = keybindtoggle.Text:lower()
-
+	
 		if bindText == "n/a" or bindText == "setting" then
 			holdKey = false
 			return
 		end
-
+	
 		if bindText == "mousebutton1" and input.UserInputType == Enum.UserInputType.MouseButton1 then
 			holdKey = false
 		elseif bindText == "mousebutton2" and input.UserInputType == Enum.UserInputType.MouseButton2 then
 			holdKey = false
 		elseif bindText == "mousebutton3" and input.UserInputType == Enum.UserInputType.MouseButton3 then
 			holdKey = false
-
+	
 		elseif input.UserInputType == Enum.UserInputType.Keyboard then
 			if input.KeyCode.Name:lower() == bindText then
 				holdKey = false
 			end
 		end
 	end)
-
+	
 	-- ===== GET CLOSEST TARGET =====
 	local function getClosestTarget()
 		local mp = UIS:GetMouseLocation()
 		local closest = nil
 		local closestDist = math.huge
-
+	
 		for _, plr in ipairs(Players:GetPlayers()) do
 			if plr ~= localPlayer and plr.Character then
 				local rootPart = plr.Character:FindFirstChild(
 					aimparttoggle.Text:lower() == "head" and "Head" or "HumanoidRootPart"
 				)
-
+	
 				if rootPart then
 					local screenPos, onScreen = camera:WorldToViewportPoint(rootPart.Position)
 					if onScreen then
 						local dx = screenPos.X - mp.X
 						local dy = screenPos.Y - mp.Y
 						local dist = math.sqrt(dx*dx + dy*dy)
-
+	
 						if dist <= (currentFOVSize / 2) and dist < closestDist then
 							closestDist = dist
 							closest = rootPart
@@ -2198,15 +2372,15 @@ local function NSXRX_fake_script() -- Frame.fovenable
 				end
 			end
 		end
-
+	
 		return closest
 	end
-
+	
 	-- ===== MAIN CAMERA LOOP =====
 	RunService.RenderStepped:Connect(function()
 		local mp = UIS:GetMouseLocation()
 		local inset = GuiService:GetGuiInset()
-
+	
 		-- FOV circle visuals
 		if showFOVToggle.Text:lower() == "on" then
 			fovCircle.Visible = true
@@ -2214,14 +2388,14 @@ local function NSXRX_fake_script() -- Frame.fovenable
 		else
 			fovCircle.Visible = false
 		end
-
+	
 		-- AIM LOCK
 		if lockAimToggle.Text:lower() == "on" and holdKey then
 			local target = getClosestTarget()
 			if target then
 				local camPos = camera.CFrame.Position
 				local desiredCFrame = CFrame.new(camPos, target.Position)
-
+	
 				if smoothnessToggle.Text:lower() == "off" then
 					camera.CFrame = desiredCFrame
 				else
@@ -2230,34 +2404,34 @@ local function NSXRX_fake_script() -- Frame.fovenable
 			end
 		end
 	end)
-
+	
 end
-coroutine.wrap(NSXRX_fake_script)()
-local function JWSIB_fake_script() -- pwrware.ESPController 
+coroutine.wrap(MBLR_fake_script)()
+local function CBRJ_fake_script() -- pwrware.ESPController 
 	local script = Instance.new('LocalScript', pwrware)
 
 	-- SERVICES
 	local Players = game:GetService("Players")
 	local RunService = game:GetService("RunService")
 	local camera = workspace.CurrentCamera
-
+	
 	local localPlayer = Players.LocalPlayer
 	local rootGui = localPlayer:WaitForChild("PlayerGui"):WaitForChild("pwrware")
-
+	
 	-- UI TOGGLES
 	local settingsGui = rootGui:WaitForChild("Frame"):WaitForChild("Frame"):WaitForChild("Frame"):WaitForChild("visualsgui"):WaitForChild("esptab")
 	local espToggle = settingsGui:WaitForChild("esptoggle")
 	local nameToggle = settingsGui:WaitForChild("nametoggle")
 	local healthToggle = settingsGui:WaitForChild("healthtoggle")
 	local chamsToggle = settingsGui:WaitForChild("chamstoggle")
-
+	
 	-- STORAGE
 	local espData = {}
-
+	
 	-- CREATE ESP ELEMENTS
 	local function createESP(player)
 		local data = {}
-
+	
 		-- Chams
 		local highlight = Instance.new("Highlight")
 		highlight.Adornee = nil
@@ -2265,13 +2439,13 @@ local function JWSIB_fake_script() -- pwrware.ESPController
 		highlight.Enabled = false
 		highlight.Parent = rootGui
 		data.highlight = highlight
-
+	
 		-- Name Billboard
 		local nameGui = Instance.new("BillboardGui")
 		nameGui.Adornee = nil
 		nameGui.AlwaysOnTop = true
 		nameGui.Parent = rootGui
-
+	
 		local nameLabel = Instance.new("TextLabel")
 		nameLabel.BackgroundTransparency = 1
 		nameLabel.TextColor3 = Color3.new(1,1,1)
@@ -2283,27 +2457,27 @@ local function JWSIB_fake_script() -- pwrware.ESPController
 		nameLabel.Parent = nameGui
 		data.nameGUI = nameGui
 		data.nameLabel = nameLabel
-
+	
 		-- Health Billboard (longer)
 		local healthGui = Instance.new("BillboardGui")
 		healthGui.Adornee = nil
 		healthGui.AlwaysOnTop = true
 		healthGui.Parent = rootGui
-
+	
 		local healthBG = Instance.new("Frame", healthGui)
 		healthBG.BackgroundColor3 = Color3.new(0,0,0)
 		healthBG.BorderSizePixel = 0
 		healthBG.Size = UDim2.new(1,0,1,0)
-
+	
 		local healthBar = Instance.new("Frame", healthBG)
 		healthBar.BackgroundColor3 = Color3.new(0,1,0)
 		healthBar.Size = UDim2.new(1,0,1,0)
 		data.healthGUI = healthGui
 		data.healthBar = healthBar
-
+	
 		espData[player] = data
 	end
-
+	
 	local function removeESP(player)
 		local data = espData[player]
 		if data then
@@ -2313,7 +2487,7 @@ local function JWSIB_fake_script() -- pwrware.ESPController
 			espData[player] = nil
 		end
 	end
-
+	
 	-- INIT PLAYERS
 	for _,plr in ipairs(Players:GetPlayers()) do
 		if plr ~= localPlayer then
@@ -2324,14 +2498,14 @@ local function JWSIB_fake_script() -- pwrware.ESPController
 		if plr ~= localPlayer then createESP(plr) end
 	end)
 	Players.PlayerRemoving:Connect(removeESP)
-
+	
 	-- UPDATE LOOP
 	RunService.RenderStepped:Connect(function()
 		local showESP    = espToggle.Text:lower() == "on"
 		local showName   = nameToggle.Text:lower() == "on"
 		local showHealth = healthToggle.Text:lower() == "on"
 		local showChams  = chamsToggle.Text:lower() == "on"
-
+	
 		for player, data in pairs(espData) do
 			local char = player.Character
 			if not showESP or not char or not char:FindFirstChild("HumanoidRootPart") then
@@ -2345,7 +2519,7 @@ local function JWSIB_fake_script() -- pwrware.ESPController
 				local dist = (camera.CFrame.Position - hrp.Position).Magnitude
 				-- Cap distance scaling at 200 studs
 				local scale = math.clamp(dist / 30, 1, 6)
-
+	
 				-- CHAMS (white)
 				if showChams then
 					data.highlight.Adornee = char
@@ -2357,7 +2531,7 @@ local function JWSIB_fake_script() -- pwrware.ESPController
 				else
 					data.highlight.Enabled = false
 				end
-
+	
 				-- NAME ESP
 				if showName then
 					data.nameGUI.Adornee = hrp
@@ -2370,7 +2544,7 @@ local function JWSIB_fake_script() -- pwrware.ESPController
 				else
 					data.nameGUI.Enabled = false
 				end
-
+	
 				-- HEALTH ESP
 				if showHealth and humanoid then
 					data.healthGUI.Adornee = hrp
@@ -2396,16 +2570,16 @@ local function JWSIB_fake_script() -- pwrware.ESPController
 			end
 		end
 	end)
-
+	
 end
-coroutine.wrap(JWSIB_fake_script)()
-local function RZAHB_fake_script() -- pwrware.LocalScript 
+coroutine.wrap(CBRJ_fake_script)()
+local function VDRRA_fake_script() -- pwrware.LocalScript 
 	local script = Instance.new('LocalScript', pwrware)
 
 	local screenGui = script.Parent
-
+	
 	screenGui.ResetOnSpawn = false
-
+	
 	task.spawn(function()
 		while true do
 			if screenGui.DisplayOrder < 999999 then
@@ -2414,9 +2588,10 @@ local function RZAHB_fake_script() -- pwrware.LocalScript
 			task.wait(1)
 		end
 	end)
-
+	
 end
-coroutine.wrap(RZAHB_fake_script)()
+coroutine.wrap(VDRRA_fake_script)()
+
 
 local art = [[
  ______ _______   ___    _  ___  ______ _____ 
